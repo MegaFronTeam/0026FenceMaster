@@ -1,11 +1,15 @@
-$default-font: "roboto";
+$default-font: "Nekst";
+$heading-font: "RoadRadio";
 // $file-form: ($file-formats: woff2 woff ttf);
-$addr: '../fonts/';
+$addr: "../fonts/";
 $file-format: woff2;
-
 
 // If font from googlefont, next lines remove
 
+	@include font-face($default-font, $addr + "Nekst-Regular", 400, $file-formats: $file-format);
+	@include font-face($default-font, $addr + "Nekst-Medium", 500, $file-formats: $file-format);
+	@include font-face($default-font, $addr + "Nekst-SemiBold", 600, $file-formats: $file-format);
+	@include font-face($heading-font, $addr + "RoadRadio-Bold", 700, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);

@@ -14,7 +14,7 @@ $rfs-breakpoint: 1200px !default;
 
 $font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; 
 
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace: $heading-font, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -24,15 +24,15 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #F5F6F7;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #8B8B8B;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-800: #373331;
+$gray-900: #050505;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -57,10 +57,10 @@ $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
+$red:     #EE332D;
+$orange:  #FF5900;
+$yellow:  #F5B04D;
+$green:   #38A868;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
@@ -315,7 +315,7 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$primary:       $orange;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -623,12 +623,12 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                rem(72);
+$h2-font-size:                rem(60);
+$h3-font-size:                rem(30);
+$h4-font-size:                rem(24);
+$h5-font-size:                rem(20);
+$h6-font-size:                rem(18);
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -643,11 +643,12 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
-$headings-font-family:        null !default;
+$headings-margin-bottom:      0;
+// $headings-margin-bottom:      $spacer * .5 !default;
+$headings-font-family:        $font-family-monospace;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        700;
+$headings-line-height:        1;
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 
