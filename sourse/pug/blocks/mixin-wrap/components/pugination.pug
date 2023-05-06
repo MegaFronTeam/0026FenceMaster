@@ -1,5 +1,33 @@
 //- pugination
-mixin pugin()
+
+mixin pagin-li(n)
+	li.page-item&attributes(attributes)
+		if n
+			a.page-link(href='#')= n 
+		else
+			block
+			
+mixin pagin()
+	nav.pagination-wrapper&attributes(attributes)
+		ul.pagination
+			+pagin-li().disabled
+				a.prev.page-link(href="#")
+					+icon('chevronLeft')
+			+pagin-li().active
+				span.page-link 1
+			- for (var x = 2; x < 4; x++)
+				+pagin-li(x)
+			+pagin-li('...')
+			//- +pagin-li()
+			//- 	span.page-link ...
+			//- - for (var x = 12; x < 15; x++)
+			+pagin-li(7)
+			+pagin-li()
+				a.next.page-link(href='#')
+					+icon('chevronRight')
+
+
+//- mixin pugin()
 	//- nav(aria-label='...')
 	//- 	ul.pagination.justify-content-center
 	//- 		li.page-item.disabled
@@ -24,27 +52,27 @@ mixin pugin()
 	//- 		li.page-item
 	//- 			a.page-link(href='#') 
 	//- 				i(class="fas fa-chevron-right")
-	.pagination-wrapper
-		ul.page-numbers
-			mixin li(n)
-				li
-					if n
-						a.page-numbers(href='#')= n 
-					else
-						block
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev.svg", alt="")
-			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev-double.svg", alt="")
-			+li()
-				span.page-numbers.current  1
-			- for (var x = 1; x < 5; x++)
-				+li(x)
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next.svg", alt="")
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next-double.svg", alt="")
+		.pagination-wrapper
+			ul.page-numbers
+				mixin li(n)
+					li
+						if n
+							a.page-numbers(href='#')= n 
+						else
+							block
+				+li()
+					span.prev.page-numbers( )
+						img(src="img/svg/prev.svg", alt="")
+				+li()
+					span.prev.page-numbers( )
+						img(src="img/svg/prev-double.svg", alt="")
+				+li()
+					span.page-numbers.current  1
+				- for (var x = 1; x < 5; x++)
+					+li(x)
+				+li()
+					a.next.page-numbers(href='#')
+						img(src="img/svg/next.svg", alt="")
+				+li()
+					a.next.page-numbers(href='#')
+						img(src="img/svg/next-double.svg", alt="")

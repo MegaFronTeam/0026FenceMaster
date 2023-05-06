@@ -2,15 +2,10 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h1 h1 КАТАЛОГ ЗАБОРОВ
-				h2 h2 каталог заборов
-				h3 h3 каталог заборов
-				h4 h4 каталог заборов
-				h5 h5 каталог заборов
-				h6 h6 каталог заборов
-				p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque similique id distinctio eum voluptate reprehenderit quos accusamus rerum modi, deserunt dolorum, voluptates quaerat deleniti suscipit ea impedit odit eligendi aperiam.
-
-			.row
-						
+			+e.wrapper.bg-wrap
+				+img('img/headerBlock-bg-1.jpg', 'bg')
+				+b.section-title.text-center
+					h1 Изготовление и&nbsp;установка ограждений под ключ в&nbsp;Москве и&nbsp;МО
+				+e.btn.btn.btn-primary(href="#") Вызвать замерщика
+			
 	// end headerBlock
