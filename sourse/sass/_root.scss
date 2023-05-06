@@ -4,7 +4,6 @@
 	// --bs-body-font-size: calc(#{$em-base} * 0.75);
 	@include media-breakpoint-up(md) {
 		// --bs-body-font-size: #{$em-base};
-
 		--sPT: #{rem(120)};
 		--sPB: #{rem(120)};
 		--sTPB: #{rem(48)};

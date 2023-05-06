@@ -1,13 +1,15 @@
 extends ../layout/main.pug
 
 include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sTypes/_sTypes.pug
+include ../blocks/sStocks/_sStocks.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -23,9 +25,11 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
-		+headerBlock 
+		+headerBlock
+		+sTypes()
+		+sStocks()
 		//- +sCatalog
 		//- +sForm()
-		+sContact()
+		//- +sContact()
 		
 	+parts('footer')

@@ -358,7 +358,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
-	// JSCCommon.imgToSVG();
+	JSCCommon.imgToSVG();
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	JSCCommon.disabledBtn();
@@ -424,17 +424,65 @@ function eventHandler() {
 		watchOverflow: true
 	});
 	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+	// const swiper4 = new Swiper('.sBanners__slider--js', {
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
 
+	// });
+	const sliderParents = document.querySelectorAll('.slider-wrapper');
+	const autoSlider = new Swiper('.slider-auto-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 12,
+		watchOverflow: true,
+		observer: true,
+		observeSlideChildren: true,
+		freeMode: {
+			enabled: true,
+			sticky: true,
+			momentumVelocityRatio: 0.3
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+		breakpoints: {
+			768: {
+				spaceBetween: 24
+			}
+		},
 	});
+
+	const sCollectionParents = document.querySelectorAll('.sCollection__item');
+	for (const sCollectionParent of sCollectionParents) {
+		const sCollectionSlider = new Swiper((sCollectionParent.querySelector('.sCollection__slider--js')), {
+			slidesPerView: 'auto',
+			spaceBetween: 16,
+			watchOverflow: true,
+			observer: true,
+			observeSlideChildren: true,
+			freeMode: {
+				enabled: true,
+				sticky: true,
+				momentumVelocityRatio: 0.3
+			},
+			grid: {
+        rows: 2,
+      },
+			lazy: {
+				loadPrevNext: true,
+			},
+			breakpoints: {
+				768: {
+					spaceBetween: 24
+				}
+			}
+		});
+	};
 
 	// modal window
 

@@ -1,0 +1,23 @@
+mixin sTypes(data)
+	// start sTypes
+	+b.sTypes.section#sTypes&attributes(attributes)
+		.container
+			.slider-wrapper
+				+e.slider.swiper.slider-auto-js
+						.swiper-wrapper
+							mixin slide(img, text)
+								+e.slide.swiper-slide
+									+e.item(href="#")
+										+img(`img/svg/sTypes-${img}.svg`).img-svg-js
+										span!= text
+							+slide(1, `Заборы из профнастила`)
+							+slide(2, `Заборы из евроштакетника`)
+							+slide(3, `Заборы из сетки рабицы`)
+							+slide(4, `Заборы из 3Д сетки`)
+							+slide(5, `Заборы жалюзи`)
+							+slide(6, `Секционные заборы`)
+							+slide(7, `Кирпичные столбы`)
+							+slide(8, `Ворота`)
+							+slide(9, `Навесы`)
+
+	// end sTypes

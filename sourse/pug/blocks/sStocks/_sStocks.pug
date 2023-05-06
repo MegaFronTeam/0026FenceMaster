@@ -1,0 +1,21 @@
+mixin sStocks(data)
+	// start sStocks
+	+b.sStocks.section#sStocks&attributes(attributes)
+		.container
+			.slider-wrapper
+				+e.slider.swiper.slider-auto-js
+						.swiper-wrapper
+							mixin slide(img, text)
+								+e.slide.swiper-slide
+									+e.item(href="#")&attributes(attributes)
+										+e.item-inner
+												+img(`img/sStocks-${img}.png`, 'bg')
+												span!= text
+							+slide(1, `Бесплатный замер`)(style="--bg: linear-gradient(145.32deg, #E87237 1.31%, #FF9E4D 100%);")
+							+slide(2, `Покраска столбов в&nbsp;подарок`)(style="--bg: linear-gradient(146.35deg, #00FF47 1.24%, #406249 100%);")
+							+slide(3, `Услуга генератора в&nbsp;подарок`)(style="--bg: linear-gradient(145.92deg, #553BC9 0%, #9681ED 100%);")
+							+slide(4, `Трамбовка столбов щебнем в&nbsp;подарок`)(style="--bg: linear-gradient(145.92deg, #34B2FE 0%, #FFDA1A 0.01%, #FFA800 100%);")
+							+slide(5, `Замок <br> в&nbsp;подарок`)(style="--bg: linear-gradient(145.92deg, #232BF3 0%, #61D3F9 100%);")
+							+slide(6, `Калитка к&nbsp;забору в&nbsp;подарок`)(style="--bg: linear-gradient(145.92deg, #FFE68D 0%, #FF003D 100%);")
+
+	// end sStocks
