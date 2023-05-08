@@ -3,6 +3,7 @@ extends ../layout/main.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sTypes/_sTypes.pug
 include ../blocks/sStocks/_sStocks.pug
+include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
@@ -28,6 +29,7 @@ block pagecontent
 		+headerBlock
 		+sTypes()
 		+sStocks()
+		+sCategories()
 		//- +sCatalog
 		//- +sForm()
 		//- +sContact()

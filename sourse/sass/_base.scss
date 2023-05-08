@@ -125,6 +125,10 @@ main {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	h1 > span, h2 > span {
+		display: inline-block;
+		color: $primary;
+	}
 }
 
 .mono {

@@ -1,0 +1,21 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 каталог 
+					span заборов
+			+e.row.row
+				- for (var x = 0; x < 9; x++)
+					.col-md-6.col-xl-4
+						+b.categoryItem
+							+e.wrap
+								+img('img/categoryItem-1.jpg', 'bg')
+								+e.btns
+									+e.row.row
+										.col-6.col-md-12
+											+e.btn.btn.btn-outline-primary(href='#') Подробнее
+										.col-6.col-md-12
+											+e.btn.btn.btn-primary(href='#') Сделать заказ
+
+	// end sCategories
