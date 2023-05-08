@@ -5,7 +5,11 @@
 	// --sTPB: #{rem()};
 	&__row {
 		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+		justify-content: center;
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
+		}
 	}
 	// .section-title{
 
@@ -34,22 +38,43 @@
 } // end.sCategories
 
 .categoryItem {
+	@include mt;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	--wrapPad: #{rem(18)};
+	@include media-breakpoint-up(xl) {
+		--wrapPad: #{rem(24)};
+	}
+	&:hover {
+		.categoryItem__btns {
+			@include media-breakpoint-up(lg) {
+				transform: translateY(0);
+			}
+		}
+		img {
+			transform: scale(1.1);
+		}
+		.h5 {
+			color: $primary;
+		}
+	}
 	&__wrap {
 		@include block(300, 456);
 		display: flex;
-		align-items: flex-end;
-		padding: rem(18);
+		flex-direction: column;
+		justify-content: space-between;
+		padding: var(--wrapPad) var(--wrapPad) calc(var(--wrapPad) * 0.667);
 		border-radius: $border-radius;
 		background-color: $light;
 		overflow: hidden;
 		z-index: 2;
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(sm) {
+			padding: var(--wrapPad);
 		}
-		@include media-breakpoint-up(xxl) {
-		}
+		
 		img {
+			@include mt;
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -67,16 +92,56 @@
 		}
 	}
 	&__btns {
+		@include mt;
 		width: 100%;
+		margin-top: auto;
+		@include media-breakpoint-up(lg) {
+			transform: translateY(250px);
+		}
 	}
 	&__row {
-		position: relative;
 		--bs-gutter-x: #{rem(12)};
 		--bs-gutter-y: var(--bs-gutter-x);
+		position: relative;
+		align-items: center;
 	}
 	&__btn {
 		width: 100%;
-		@include media-breakpoint-down(md) {
+		
+		@include media-breakpoint-down(sm) {
+			--bs-btn-padding-y: #{rem(14)};
+			--bs-btn-padding-x: #{rem(14)};
+			--bs-btn-font-size: #{rem(12)};
+			--bs-btn-line-height: 1.35;
+			--bs-btn-border-radius: #{rem(8)};
+		}
+	}
+	&__caption {
+		display: flex;
+		flex-direction: column;
+		margin-top: rem(18);
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			left: var(--wrapPad);
+			top: var(--wrapPad);
+			width: 100%;
+			max-width: calc(100% - var(--wrapPad) * 2);
+			z-index: 2;
+			margin-top: 0;
+			color: $white;
+		}
+		.h5 {
+			@include mt;
+			margin-bottom: rem(6);
+		}
+		span {
+			display: inline-block;
+			font-size: rem(12);
+			line-height: 1.35;
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+				line-height: 1.25;
+			}
 		}
 	}
 }

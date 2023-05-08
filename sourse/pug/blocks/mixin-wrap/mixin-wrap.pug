@@ -61,3 +61,17 @@ mixin topAlert()
 		.container
 			+customAlert('delivery', 'Осуществляем бесплатную бережную доставку в любой день недели при заказе').custom-alert--success.justify-content-center
 
+mixin categoryItem(img, title, price)
+	+b.categoryItem
+		+e.wrap
+			+img(`img/${img}`, 'bg')
+			+e.btns
+				+e.row.row
+					.col-6.col-lg-12
+						+e.btn.btn.btn-outline-light(href='#') Подробнее
+					.col-6.col-lg-12
+						+e.btn.btn.btn-primary(href='#') Сделать заказ
+		+e.caption
+			.h5!= title
+			span!= price
+	
