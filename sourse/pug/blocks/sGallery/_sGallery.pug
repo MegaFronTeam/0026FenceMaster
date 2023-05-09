@@ -1,0 +1,18 @@
+mixin sGallery(data)
+	// start sGallery
+	+b.SECTION.sGallery.section#sGallery&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 фотогалерея наших 
+					span ограждений
+			+e.row.row
+				mixin sGalleryItem(img)
+					+e.col.col-md-6.col-xl-4
+						+e.item(href=`img/sGallery-lg-${img}.jpg` data-fancybox="sGallery")
+							+img(`img/sGallery-${img}.jpg`, 'bg')
+				- for (var x = 1; x < 10; x++)
+					+sGalleryItem(x)
+				.col-12.d-flex.justify-content-center
+					+e.btn-more.btn.btn-outline-primary(href="#") Показать еще
+
+	// end sGallery
