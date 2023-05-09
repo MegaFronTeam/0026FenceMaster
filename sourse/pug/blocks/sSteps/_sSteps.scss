@@ -53,10 +53,10 @@
 				transform: scale(1.1);
 			}
 			.sSteps__caption {
-				&::after {
-					color: $primary;
-					background-color: $white;
-				}
+				// &::after {
+				// 	color: $primary;
+				// 	background-color: $white;
+				// }
 				&::before {
 					opacity: 1;
 				}
