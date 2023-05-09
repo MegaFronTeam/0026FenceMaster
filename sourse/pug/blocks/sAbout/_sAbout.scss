@@ -12,7 +12,7 @@
 		.sAbout__col {
 			@include media-breakpoint-up(xxl) {
 				padding-left: rem(48);
-				padding-left: calc(var(--bs-gutter-x) / 2);
+				padding-right: calc(var(--bs-gutter-x) / 2);
 			}
 		}
 	}
@@ -55,7 +55,9 @@
 		h2 {
 			margin-bottom: rem(24);
 			text-align: center;
+			max-width: 14em;
 			@include media-breakpoint-up(lg) {
+				max-width: 100%;
 				text-align: left;
 				margin-bottom: rem(36);
 			}

@@ -1,0 +1,22 @@
+mixin sFeatures(data)
+	// start sFeatures
+	+b.SECTION.sFeatures.section#sFeatures&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 преимущества компании 
+					span мастерзабор
+			+e.row.row
+				mixin sFeaturesItem(img, h, text)
+					.col-md-6.col-xl-4
+						+e.item
+							+e.img-wrap
+								+img(`img/svg/sFeatures-${img}.svg`).img-svg-js
+							h5!= h
+							p!= text
+				+sFeaturesItem(1, `Бесплатная доставка`, `Бережная своевременная доставка в&nbsp;любой день недели`)
+				+sFeaturesItem(2, `Соблюдение сроков`, `Соблюдаем сроки сдачи проектов и&nbsp;несем финансовую ответственность за&nbsp;каждый день просрочки`)
+				+sFeaturesItem(3, `Низкие цены`, `Предоставляем эксклюзиивные цены от&nbsp;производителей`)
+				+sFeaturesItem(4, `Бесплатный замер`, `При заключении договора замер бесплатно`)
+				+sFeaturesItem(5, `Гарантия на&nbsp;работу`, `Мы&nbsp;предоставляем гарантию качества выполненных работ. Мы&nbsp;исправим любые недочеты бесплатно в&nbsp;течение 2&nbsp;лет`)
+				+sFeaturesItem(6, `Стаж более 15&nbsp;лет`, `С&nbsp;вами будут работать специалисты с&nbsp;опытом работы более 15&nbsp;лет`)
+	// end sFeatures
