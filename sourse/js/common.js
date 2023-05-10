@@ -493,11 +493,15 @@ function eventHandler() {
 
 
 	// modal window
-
-
-
-
-
+	document.addEventListener('click', (event) => {
+		let submenuTarget = event.target.closest('.menu-item-has-children');
+		if(submenuTarget) {
+			if (window.matchMedia('(max-width: 1452px)').matches) {
+				$('.menu-item-has-children').toggleClass('active');
+				$('.menu-item-has-children .sub-menu').slideToggle();
+			}
+		}
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
