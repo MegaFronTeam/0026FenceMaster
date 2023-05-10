@@ -8,6 +8,12 @@ mixin sFAQ(data)
 						span Что нужно знать 
 						<br>
 						|  перед покупкой ограждения
+				+e.img-row.row.d-none.d-md-flex
+					- for (var x = 0; x < 3; x++)
+						.col-4
+							+e.img-wrap
+								+img('img/sFAQ.png')
+
 			+ddGroup()
 				+ddGroupItem(`типы заборов`, 'active')
 				+ddGroupItem(`установка забора`)
