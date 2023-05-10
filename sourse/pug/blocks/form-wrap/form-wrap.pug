@@ -1,6 +1,6 @@
 mixin form-head()
 	form.js-form-validate( data-parsley-validate="") 
-		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+		input(class="order" name='order' type='hidden', value=`Заявка  с сайта`) 
 		block
 
 mixin input(placeholder,  t='text', label, name= t)
@@ -14,7 +14,7 @@ mixin input(placeholder,  t='text', label, name= t)
 					option(value=` placeholder ${x}`)= `placeholder ${x}`
 		else if t=='file'
 			+e.INPUT.input.form-control(name=name type=t)&attributes(attributes)
-			
+
 		else if t=='number'
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')&attributes(attributes)
 		else if t=='date'
@@ -37,17 +37,17 @@ mixin select(label,pl,...items)
 			+e.SPAN.title= label
 			+e.SELECT.input.form-control&attributes(attributes)
 
-					option()= pl
-					each item in items
-						option()= item
+				option()= pl
+				each item in items
+					option()= item
 
 //- wrapper for form
 mixin form-wrap(inp)
 	+b.form-wrap&attributes(attributes)
 		form
 			if inp
-				input(name='example-input-field', type='hidden')
-				input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+				input(name='example-input-field' type='hidden')
+				input(class="order" name='order' type='hidden', value=`Заявка  с сайта`) 
 				input(class='utm_source' name='utm_source' type="hidden")
 				input(class='utm_term' name='utm_term' type="hidden")
 				input(class='utm_medium' name='utm_medium' type="hidden")
@@ -63,11 +63,11 @@ mixin in-c(typ="checkbox", text, name= typ )
 			block 
 		else
 			+e.SPAN.text.form-check-label= text
- 
+
 mixin add-file(n)
 	+b.add-file
 		label
-			+e.INPUT.input(name='file', type='file')
+			+e.INPUT.input(name='file' type='file')
 			+e.SPAN.btn 
 			+e.SPAN.text   Прикрепить резюме
 		+e.SPAN.filename 
@@ -76,4 +76,5 @@ mixin add-file(n)
 mixin policy()
 	+e.policy
 		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+			+e.text Я ознакомился с условиями обработки 
+				a(href="#") персональных данных
