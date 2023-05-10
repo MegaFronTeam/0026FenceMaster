@@ -2,11 +2,12 @@ mixin sFAQ(data)
 	// start sFAQ
 	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 
-					span Что нужно знать 
-					<br>
-					|  перед покупкой ограждения
+			+e.wrap
+				+b.section-title.text-center
+					h2 
+						span Что нужно знать 
+						<br>
+						|  перед покупкой ограждения
 			+ddGroup()
 				+ddGroupItem(`типы заборов`, 'active')
 				+ddGroupItem(`установка забора`)
