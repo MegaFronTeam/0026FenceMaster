@@ -23,6 +23,7 @@
 			background-repeat: no-repeat;
 			background-position: right;
 			background-size: cover;
+			margin-top: rem(60);
 		}
 		@include media-breakpoint-up(xl) {
 			padding: rem(60);
