@@ -458,6 +458,35 @@ function eventHandler() {
 				}
 			},
 		});
+		const reviewSlider = new Swiper((sliderParent.querySelector('.sReviews__slider--js')), {
+			// freeMode: true,
+			// loopFillGroupWithBlank: true,
+			touchRatio: 0.4,
+			// freeModeMomentum: true,
+			loop: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			watchOverflow: true,
+			spaceBetween: 16,
+			slidesPerView: 1,
+			noSwipingClass: 'plyr',
+			// slideToClickedSlide: true,
+			navigation: {
+				nextEl: '.sReviews .swiper-button-next',
+				prevEl: '.sReviews .swiper-button-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 24
+				},
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 24
+				},
+			}
+		});
 	};
 
 	const player = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p, { invertTime: false }));

@@ -1,3 +1,23 @@
+mixin reviewItem(img, name, date)
+	+b.reviewItem
+		+e.head
+			+e.img-wrap
+				+img(`img/sReviews-${img}.jpg`, 'bg')
+			+e.name
+				.h5!= name
+				span!= date
+		+b.star-block
+			+icon("star", "active")
+			+icon("star", "active")
+			+icon("star", "active")
+			+icon("star", "active")
+			+icon("star")
+		+e.player
+			audio.js-player(controls='')
+				source(src="audio/sample.mp3" type="audio/mp3")
+		p Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore hic recusandae laboriosam asperiores, odit magni perspiciatis nostrum exercitationem beatae omnis cupiditate quo rerum ducimus eligendi amet. Modi veniam animi consequuntur quaerat dolore! Optio aliquid ad inventore laboriosam sit, porro cumque debitis esse alias quisquam, maxime et ea. Voluptates delectus quisquam odit dolorum fuga. Voluptatibus alias, voluptatem libero recusandae ullam tempora!
+		+e.link-more(href="#") Развернуть
+
 mixin sReviews(data)
 	// start sReviews
 	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
@@ -7,14 +27,20 @@ mixin sReviews(data)
 					span отзывы
 					|  клиентов
 			.slider-wrapper
-				+e.slider.swiper.slider-auto-js
-						.swiper-wrapper
-								+e.slide.swiper-slide
-									+reviewItem(1, `Вера Сескутова`, `3&nbsp;апреля 2023`)
-								+e.slide.swiper-slide
-									+reviewItem(2, `Василий нефтюков`, `30&nbsp;мая 2022`)
-								+e.slide.swiper-slide
-									+reviewItem(3, `Илья Словеснов`, `28&nbsp;августа 2022`)
-				+e.arrow-wrap
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+reviewItem(1, `Вера Сескутова`, `3&nbsp;апреля 2023`)
+						+e.slide.swiper-slide
+							+reviewItem(2, `Василий нефтюков`, `30&nbsp;мая 2022`)
+						+e.slide.swiper-slide
+							+reviewItem(3, `Илья Словеснов`, `28&nbsp;августа 2022`)
+						+e.slide.swiper-slide
+							+reviewItem(1, `Вера Сескутова`, `3&nbsp;апреля 2023`)
+						+e.slide.swiper-slide
+							+reviewItem(2, `Василий нефтюков`, `30&nbsp;мая 2022`)
+						+e.slide.swiper-slide
+							+reviewItem(3, `Илья Словеснов`, `28&nbsp;августа 2022`)
+				+e.arrows
 					+arrow
 	// end sReviews
