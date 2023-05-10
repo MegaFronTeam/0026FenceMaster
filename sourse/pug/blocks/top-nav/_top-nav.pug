@@ -21,18 +21,23 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			.row
-				.col-auto
-					+e.logo(href="/")
-						+img('img/svg/top-logo.svg')
-				.col
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							//- +menu-toggle()
-							+mnu()
-				
-				.col-auto
-					+e.btn.btn.btn-outline-primary(href="#") Заказать звонок
-				.col-auto.d-lg-none
-					+menu-toggle()
+			+e.wrap
+				+e.row.row
+					.col-auto
+						+e.logo(href="/"): +img('img/svg/top-logo.svg')
+					.col
+						.menu-mobile.menu-mobile--js
+							.menu-mobile__inner
+								//- +menu-toggle()
+								+mnu()
+					.col-auto
+						+e.city(data-src='#modal-call' data-fancybox).btn-modal-js
+							| Москва
+							+icon('chevronDown')
+					.col-auto
+						+contactUs
+					.col-auto
+						+e.btn.btn.btn-outline-primary(href="#") Заказать звонок
+					.col-auto.d-lg-none
+						+menu-toggle()
 	// end top-nav

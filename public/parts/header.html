@@ -4,32 +4,58 @@
 	<!-- start top-nav-->
 	<div class="top-nav block-with-lazy">
 		<div class="container">
-			<div class="row">
-				<div class="col-auto">
-					<a class="top-nav__logo" href="/"><img src="img/svg/top-logo.svg" alt="" loading="lazy"/>
-					</a>
-				</div>
-				<div class="col">
-					<div class="menu-mobile menu-mobile--js">
-						<div class="menu-mobile__inner">
-							<nav>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Компания</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
-								</ul>
-							</nav>
+			<div class="top-nav__wrap">
+				<div class="top-nav__row row">
+					<div class="col-auto">
+						<a class="top-nav__logo" href="/"><img src="img/svg/top-logo.svg" alt="" loading="lazy"/>
+						</a>
+					</div>
+					<div class="col">
+						<div class="menu-mobile menu-mobile--js">
+							<div class="menu-mobile__inner">
+								<nav>
+									<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Прайс-лист</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+										<li class="menu-item menu-item-has-children"><a href="#">Компания</a>
+											<ul class="sub-menu">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Выполненные работы</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Блог</a></li>
+											</ul>
+										</li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+									</ul>
+								</nav>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-auto">
-					<a class="top-nav__btn btn btn-outline-primary" href="#">Заказать звонок
-					</a>
-				</div>
-				<div class="col-auto d-lg-none">
-					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+					<div class="col-auto">
+						<div class="top-nav__city btn-modal-js" data-src="#modal-call" data-fancybox="data-fancybox">Москва
+							<svg class="icon icon-chevronDown ">
+								<use xlink:href="img/svg/sprite.svg#chevronDown"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="contact-us">
+							<div class="contact-us__head">+7 (495) 510-77-85
+								<svg class="icon icon-chevronDown ">
+									<use xlink:href="img/svg/sprite.svg#chevronDown"></use>
+								</svg>
+							</div>
+							<div class="contact-us__body">
+							</div>
+						</div>
+					</div>
+					<div class="col-auto">
+						<a class="top-nav__btn btn btn-outline-primary" href="#">Заказать звонок
+						</a>
+					</div>
+					<div class="col-auto d-lg-none">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+						</div>
 					</div>
 				</div>
 			</div>

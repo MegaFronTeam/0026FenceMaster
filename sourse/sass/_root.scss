@@ -29,7 +29,10 @@
 	--swiperColorDefHover: var(--bs-primary);
 	--swiperBgDefHover: #ffffff;
 
-	--fancybox-bg: rgba(24, 24, 27, 0.77);
+	.fancybox__container {
+
+		--fancybox-bg: rgba(55, 51, 49, 0.48);
+	}
 
 	.row {
 		@include media-breakpoint-down(md) {

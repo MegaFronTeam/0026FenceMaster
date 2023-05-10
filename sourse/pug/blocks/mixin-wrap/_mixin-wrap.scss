@@ -279,3 +279,39 @@
 		}
 	}
 }
+
+.contact-us {
+	&__head {
+		@include mt;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		font-size: rem(12);
+		line-height: 1.35;
+		font-weight: 700;
+		border-radius: 6px;
+		background-color: transparent;
+		@include media-breakpoint-up(md) {
+			font-size: rem(18);
+		}
+		&:hover {
+			.icon {
+				transform: rotateX(-180deg);
+			}
+		}
+		.icon {
+			@include mt;
+			color: $primary;
+			flex: 0 0 auto;
+			font-size: rem(20);
+			margin-left: rem(3);
+			// margin-top: rem(1);
+		}
+	}
+	&__body {
+		position: absolute;
+		left: 50%;
+		top: calc(100% + var(--sPB) + rem(6));
+		transform: translateX(-50%);
+	}
+}

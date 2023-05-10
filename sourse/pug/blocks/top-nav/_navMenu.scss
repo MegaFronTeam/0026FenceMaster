@@ -3,23 +3,94 @@
 
 		display: flex;
 		text-align: center;
-		@include roww(20px);
+		@include roww(6px, m);
 		flex-wrap: wrap;
 	}
 
 	list-style: none;
-	position: relative;
+	// position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
 	li{
 		
 		// margin-left: 0;
 		// margin-right: 0;
-		padding: 0;
+		// padding: 0;
 	}
 	a{
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(6) rem(12);
+		font-size: rem(12);
+		line-height: 1.25;
+		border-radius: 6px;
+		background-color: transparent;
+		color: $gray-900;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(16);
+		}
+		&:hover {
+			background-color: $gray-100;
+		}
+	}
+	.menu-item-has-children {
+		&:hover {
+			.sub-menu {
+				@include media-breakpoint-up(lg) {
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+		&.active {
+			.sub-menu {
+				@include media-breakpoint-down(lg) {
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+	}
+	.sub-menu {
+		// @include roww('48px');
+		@include mt;
+		position: absolute;
+		top: calc(100% + var(--sPB) + rem(6));
+		left: calc(50% );
+		transform: translateX(-50%);
+		z-index: 100;
+		width: 100%;
+		background-color: #FFFFFF;
+		border: 1px solid $gray-300;
+		box-shadow: 0px 6px 12px rgba(5, 5, 5, 0.12);
+		border-radius: 12px;
+		opacity: 0;
+		pointer-events: none;
+		list-style: none;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: rem(48) rem(60);
+		&::before {
+			content: '';
+			position: absolute;
+			width: 20%;
+			height: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			top: -25%;
+			z-index: -1;
+		}
+		li {
+			margin-right: rem(48);
+		}
+		a {
+			padding: 0;
+			&:hover {
+				background-color: transparent;
+				color: $primary;
+			}
+		}
 	}
 }
 
@@ -132,22 +203,22 @@
 		}
 
 
-		ul {
-			position: relative;
-		}
+		// ul {
+		// 	position: relative;
+		// }
 
-		li {
-			display: block;
-			margin: 0;
-			border-top: 1px solid rgba(255, 255, 255, .13);
+		// li {
+		// 	display: block;
+		// 	margin: 0;
+		// 	border-top: 1px solid rgba(255, 255, 255, .13);
 
-			a {
-				// font-size: 16px;
+		// 	a {
+		// 		// font-size: 16px;
 
-				padding: 10px;
-				display: block;
+		// 		padding: 10px;
+		// 		display: block;
 
-			}
-		}
+		// 	}
+		// }
 	}
 }
