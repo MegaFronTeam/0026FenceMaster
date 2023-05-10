@@ -1,5 +1,5 @@
 /**
- * Swiper Custom Element 9.3.0
+ * Swiper Custom Element 9.2.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 8, 2023
+ * Released on: April 21, 2023
  */
 
 /* eslint-disable spaced-comment */
@@ -73,7 +73,6 @@ class SwiperContainer extends ClassToExtend {
   }
 
   render() {
-    if (this.rendered) return;
     if (globalInjectStyles) {
       // global styles
       addGlobalStyles(false, this);
@@ -103,20 +102,19 @@ class SwiperContainer extends ClassToExtend {
       </div>
       <slot name="container-end"></slot>
       ${needsNavigation(this.passedParams) ? `
-        <div part="button-prev" class="swiper-button-prev"></div>
-        <div part="button-next" class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       ` : ''}
       ${needsPagination(this.passedParams) ? `
-        <div part="pagination" class="swiper-pagination"></div>
+        <div class="swiper-pagination"></div>
       ` : '' }
       ${needsScrollbar(this.passedParams) ? `
-        <div part="scrollbar" class="swiper-scrollbar"></div>
+        <div class="swiper-scrollbar"></div>
       ` : '' }
     `;
     [...this.tempDiv.children].forEach((el) => {
       this.shadowEl.appendChild(el);
     });
-    this.rendered = true;
   }
 
   initialize() {
@@ -148,14 +146,6 @@ class SwiperContainer extends ClassToExtend {
   }
 
   connectedCallback() {
-    if (
-      this.initialized &&
-      this.nested &&
-      this.closest('swiper-slide') &&
-      this.closest('swiper-slide').swiperLoopMoveDOM
-    ) {
-      return;
-    }
     if (this.init === false || this.getAttribute('init') === 'false') {
       addGlobalStyles(true, this);
       return;
@@ -164,13 +154,6 @@ class SwiperContainer extends ClassToExtend {
   }
 
   disconnectedCallback() {
-    if (
-      this.nested &&
-      this.closest('swiper-slide') &&
-      this.closest('swiper-slide').swiperLoopMoveDOM
-    ) {
-      return;
-    }
     if (this.swiper && this.swiper.destroy) {
       this.swiper.destroy();
     }

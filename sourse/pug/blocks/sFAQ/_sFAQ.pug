@@ -9,10 +9,15 @@ mixin sFAQ(data)
 						<br>
 						|  перед покупкой ограждения
 				+e.img-row.row.d-none.d-md-flex
-					- for (var x = 0; x < 3; x++)
-						.col-4
-							+e.img-wrap
-								+img('img/sFAQ.png')
+					.col-4
+						+e.img-wrap(data-aos="fade-left" data-aos-delay="100")
+							+img('img/sFAQ.png')
+					.col-4
+						+e.img-wrap(data-aos="fade-left" data-aos-delay="600")
+							+img('img/sFAQ.png')
+					.col-4
+						+e.img-wrap(data-aos="fade-left" data-aos-delay="1100")
+							+img('img/sFAQ.png')
 
 			+ddGroup()
 				+ddGroupItem(`типы заборов`, 'active')
