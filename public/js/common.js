@@ -484,6 +484,9 @@ function eventHandler() {
 		});
 	};
 
+	const player = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p, { invertTime: false }));
+
+
 	// modal window
 
 	

@@ -12,7 +12,7 @@ mixin sGallery(data)
 							+img(`img/sGallery-${img}.jpg`, 'bg')
 				- for (var x = 1; x < 10; x++)
 					+sGalleryItem(x)
-				.col-12.d-flex.justify-content-center
+				+e.btn-wrap
 					+e.btn-more.btn.btn-outline-primary(href="#") Показать еще
 
 	// end sGallery
