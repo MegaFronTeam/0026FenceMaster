@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '.btn-modal-js';
 		Fancybox.bind(link, {
@@ -30,8 +30,8 @@ const JSCCommon = {
 				IFRAME_ERROR: "Ошибка загрузки iframe",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -40,7 +40,7 @@ const JSCCommon = {
 		});
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
-			if(!element) return;
+			if (!element) return;
 			let modal = document.querySelector(element.dataset.src);
 			const data = element.dataset;
 
@@ -61,37 +61,37 @@ const JSCCommon = {
 	},
 	// /modalCall
 	toggleMenu() {
-    const toggle = document.querySelectorAll('.toggle-menu-mobile--js');
-    const menu = document.querySelector('.menu-mobile--js');
-    toggle.forEach((el) => el.classList.toggle('on'));
-    menu.classList.toggle('active');
-    [document.body, document.querySelector('html')].forEach((el) => el.classList.toggle('fixed'));
-  },
-  closeMenu() {
-    const toggle = document.querySelectorAll('.toggle-menu-mobile--js');
-    const menu = document.querySelector('.menu-mobile--js');
-    toggle.forEach((element) => element.classList.remove('on'));
-    if (menu) {
-      menu.classList.remove('active');
-      [document.body, document.querySelector('html')].forEach((el) => el.classList.remove('fixed'));
-    }
-  },
-  mobileMenu() {
-    document.addEventListener('click', (event) => {
-        let container = event.target.closest('.menu-mobile--js'); // (1)
-        let toggle = event.target.closest('.toggle-menu-mobile--js'); // (1)
-        if (toggle) this.toggleMenu();
-        if (!container && !toggle) this.closeMenu();
-      },
-      { passive: true },
-    );
+		const toggle = document.querySelectorAll('.toggle-menu-mobile--js');
+		const menu = document.querySelector('.menu-mobile--js');
+		toggle.forEach((el) => el.classList.toggle('on'));
+		menu.classList.toggle('active');
+		[document.body, document.querySelector('html')].forEach((el) => el.classList.toggle('fixed'));
+	},
+	closeMenu() {
+		const toggle = document.querySelectorAll('.toggle-menu-mobile--js');
+		const menu = document.querySelector('.menu-mobile--js');
+		toggle.forEach((element) => element.classList.remove('on'));
+		if (menu) {
+			menu.classList.remove('active');
+			[document.body, document.querySelector('html')].forEach((el) => el.classList.remove('fixed'));
+		}
+	},
+	mobileMenu() {
+		document.addEventListener('click', (event) => {
+			let container = event.target.closest('.menu-mobile--js'); // (1)
+			let toggle = event.target.closest('.toggle-menu-mobile--js'); // (1)
+			if (toggle) this.toggleMenu();
+			if (!container && !toggle) this.closeMenu();
+		},
+			{ passive: true },
+		);
 
-    window.addEventListener('resize', () => {
-        if (window.matchMedia('(min-width: 992px)').matches) this.closeMenu();
-      },
-      { passive: true },
-    );
-  },
+		window.addEventListener('resize', () => {
+			if (window.matchMedia('(min-width: 992px)').matches) this.closeMenu();
+		},
+			{ passive: true },
+		);
+	},
 
 	// tabs  .
 	tabscostume(tab) {
@@ -151,7 +151,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	sendForm() {
@@ -279,14 +279,14 @@ const JSCCommon = {
 	},
 	makeDDGroup() {
 		$('.dd-head-js').on('click', function () {
-      let clickedHead = this;
-      $(this).parent().toggleClass('active');
-      $(this)
-        .next()
-        .slideToggle(function () {
-          $(this).toggleClass('active');
-        });
-    });
+			let clickedHead = this;
+			$(this).parent().toggleClass('active');
+			$(this)
+				.next()
+				.slideToggle(function () {
+					$(this).toggleClass('active');
+				});
+		});
 		// let parents = document.querySelectorAll('.dd-group-js');
 		// for (let parent of parents) {
 		// 	if (parent) {
@@ -316,28 +316,28 @@ const JSCCommon = {
 		// }
 	},
 	imgToSVG() {
-    const convertImages = (query, callback) => {
+		const convertImages = (query, callback) => {
 			const images = document.querySelectorAll(query);
-	
+
 			images.forEach(image => {
 				fetch(image.src)
 					.then(res => res.text())
 					.then(data => {
 						const parser = new DOMParser();
 						const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-	
+
 						if (image.id) svg.id = image.id;
 						if (image.className) svg.classList = image.classList;
-	
+
 						image.parentNode.replaceChild(svg, image);
 					})
 					.then(callback)
 					.catch(error => console.error(error))
 			});
 		};
-	
+
 		convertImages('.img-svg-js');
-  },
+	},
 	disabledBtn(input = '.form-wrap__policy input', btn = ".form-wrap__btn", parent = ".form-wrap") {
 		$(document).on("change", input, function () {
 			let btnDisabled = $(this).parents(parent).find(btn)
@@ -352,7 +352,7 @@ const JSCCommon = {
 };
 const $ = jQuery;
 
-function eventHandler() { 
+function eventHandler() {
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
@@ -364,11 +364,11 @@ function eventHandler() {
 	JSCCommon.disabledBtn();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'screen/'+document.body.dataset.bg;
+	screenName = 'screen/' + document.body.dataset.bg;
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(${screenName});"></div>`);
 	}
@@ -417,13 +417,13 @@ function eventHandler() {
 			// }
 		},
 	}
-	
+
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
 	});
-	
+
 	// const swiper4 = new Swiper('.sBanners__slider--js', {
 	// 	// slidesPerView: 5,
 	// 	...defaultSl,
@@ -435,33 +435,12 @@ function eventHandler() {
 	// 	freeModeMomentum: true,
 
 	// });
-	const sliderParents = document.querySelectorAll('.slider-wrapper');
-	const autoSlider = new Swiper('.slider-auto-js', {
-		slidesPerView: 'auto',
-		spaceBetween: 12,
-		watchOverflow: true,
-		observer: true,
-		observeSlideChildren: true,
-		freeMode: {
-			enabled: true,
-			sticky: true,
-			momentumVelocityRatio: 0.3
-		},
-		lazy: {
-			loadPrevNext: true,
-		},
-		breakpoints: {
-			768: {
-				spaceBetween: 24
-			}
-		},
-	});
 
-	const sCollectionParents = document.querySelectorAll('.sCollection__item');
-	for (const sCollectionParent of sCollectionParents) {
-		const sCollectionSlider = new Swiper((sCollectionParent.querySelector('.sCollection__slider--js')), {
+	const sliderParents = document.querySelectorAll('.slider-wrapper');
+	for (const sliderParent of sliderParents) {
+		const autoSlider = new Swiper((sliderParent.querySelector('.slider-auto-js')), {
 			slidesPerView: 'auto',
-			spaceBetween: 16,
+			spaceBetween: 12,
 			watchOverflow: true,
 			observer: true,
 			observeSlideChildren: true,
@@ -470,9 +449,6 @@ function eventHandler() {
 				sticky: true,
 				momentumVelocityRatio: 0.3
 			},
-			grid: {
-        rows: 2,
-      },
 			lazy: {
 				loadPrevNext: true,
 			},
@@ -480,6 +456,35 @@ function eventHandler() {
 				768: {
 					spaceBetween: 24
 				}
+			},
+		});
+		const reviewSlider = new Swiper((sliderParent.querySelector('.sReviews__slider--js')), {
+			// freeMode: true,
+			// loopFillGroupWithBlank: true,
+			touchRatio: 0.4,
+			// freeModeMomentum: true,
+			loop: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			watchOverflow: true,
+			spaceBetween: 16,
+			slidesPerView: 1,
+			noSwipingClass: 'plyr',
+			// slideToClickedSlide: true,
+			navigation: {
+				nextEl: '.sReviews .swiper-button-next',
+				prevEl: '.sReviews .swiper-button-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 24
+				},
+				1200: {
+					slidesPerView: 3,
+					spaceBetween: 24
+				},
 			}
 		});
 	};
@@ -489,9 +494,9 @@ function eventHandler() {
 
 	// modal window
 
-	
-    
- 
+
+
+
 
 };
 if (document.readyState !== 'loading') {

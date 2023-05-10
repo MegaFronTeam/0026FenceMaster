@@ -17,23 +17,26 @@
 		--sTPB: #{rem(48)};
 	}
 
-
+	--fancybox-bg: rgba(24, 24, 27, 0.77);
 	--fancybox-content-color: var(--bs-body-color);
-	--swiperArrowSize: #{rem(68)};
+
+	--swiperArrowSize: #{rem(48)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
 	--swiperBorderColorDef: var(--bs-primary);
 	--swiperColorDef: var(--bs-primary);
 	--swiperBgDef: #ffffff;
 
 	--swiperBorderColorDefHover: var(--bs-primary);
-	--swiperColorDefHover: var(--bs-primary);
-	--swiperBgDefHover: #ffffff;
+	--swiperColorDefHover: var(--bs-white);
+	--swiperBgDefHover: var(--bs-primary);
+	@include media-breakpoint-up(md) {
+		--swiperArrowSize: #{rem(60)};
+	}
 
 	.fancybox__container {
 
 		--fancybox-bg: rgba(55, 51, 49, 0.48);
 	}
-
 	.row {
 		@include media-breakpoint-down(md) {
 			--bs-gutter-x: 12px;
@@ -45,7 +48,7 @@
 	--plyr-control-icon-size: #{rem(16)};
 	--plyr-audio-controls-background: #{$gray-800};
 	--plyr-audio-control-color: #{$primary};
-	--plyr-audio-control-color-hover: #FF6E20;
+	--plyr-audio-control-color-hover: #ff6e20;
 	--plyr-control-spacing: 8px;
 	--plyr-audio-progress-buffered-background: rgba(255, 255, 255, 0.12);
 	--plyr-range-thumb-height: #{rem(14)};
