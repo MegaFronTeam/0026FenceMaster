@@ -1,9 +1,59 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+		+e.top
+			.container
+				+e.row.row
+					.col-lg-auto
+						+e.logo(href="/")
+							+img('img/svg/top-logo.svg')
+						+e.subtitle Изготовление и&nbsp;установка ограждений под ключ в&nbsp;Москве и&nbsp;МО
+						+e.rating
+							+img('img/rating.jpg')
+						+e.site-map(href="#") Карта сайта
+					.col
+						+e.menu-row.row
+							.col
+								+e.title Каталог
+								ul
+									li: a(href="#") Заборы из профнастила
+									li: a(href="#") Заборы из евроштакетника
+									li: a(href="#") Заборы сетки рабицы
+									li: a(href="#") Заборы из 3Д сетки
+									li: a(href="#") Заборы жалюзи
+									li: a(href="#") Секционные заборы
+									li: a(href="#") Кирпичные столбы
+									li: a(href="#") Ворота
+
+							.col
+								+e.title Компания
+								ul
+									li: a(href="#") О компании
+									li: a(href="#") Выполненные работы
+									li: a(href="#") Блог
+
+							.col
+								ul
+									li: a(href="#") Прайс-лист
+									li: a(href="#") Калькулятор
+									li: a(href="#") Контакты
+
+					.col-lg-auto
+						+e.contacts
+							+e.tel(htef="tel:+74955107785")
+								span +7 (495) 510-77-85
+								+img('img/svg/whatsapp.svg').img-svg-js
+							+e.schedule Ежедневно с 8:00 до 20:00
+							+e.btn.btn.btn-outline-primary(href="#") Заказать звонок
+							+e.adress 125481, г. Москва, ул&nbsp;Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.
+
+		+e.bottom
+			.container
+				.row
+					.col-md
+						p © 2023 «МастераЗаборов»
+					.col-md
+						+e.policy(href="#") Политика конфиденциальности 
+					.col-md.text-md-end
+						+e.scrollTop--js
+							+icon('chevronTop')
+							span Наверх
