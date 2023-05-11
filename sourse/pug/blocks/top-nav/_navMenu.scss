@@ -297,6 +297,9 @@
 			padding-bottom: rem(18);
 			opacity: 1;
 			pointer-events: all;
+			@include media-breakpoint-up(xxl) {
+				display: none !important;
+			}
 		}
 		.soc {
 			margin-bottom: 0;
