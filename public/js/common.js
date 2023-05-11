@@ -338,6 +338,25 @@ const JSCCommon = {
 
 		convertImages('.img-svg-js');
 	},
+	scrollToTopOfPage(elems) {
+    elems.forEach((elem) => {
+      if (document.querySelector(elem)) {
+        document.addEventListener('scroll', function () {
+            if (window.scrollY > 400) {
+              document.querySelector(elem).classList.add('active');
+            } else {
+              document.querySelector(elem).classList.remove('active');
+            }
+          },
+          { passive: true },
+        );
+      }
+      document.addEventListener('click', function (event) {
+        let scrollTopBtn = event.target.closest(elem);
+        if (scrollTopBtn) window.scrollTo(0, 0);
+      });
+    });
+  },
 	disabledBtn(input = '.form-wrap__policy input', btn = ".form-wrap__btn", parent = ".form-wrap") {
 		$(document).on("change", input, function () {
 			let btnDisabled = $(this).parents(parent).find(btn)
@@ -362,6 +381,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	JSCCommon.disabledBtn();
+	JSCCommon.scrollToTopOfPage(['.footer__scrollTop--js', '.scrolToTop']);
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 

@@ -11,7 +11,7 @@ mixin footer()
 							+e.rating
 								+img('img/rating.jpg')
 							+e.site-map(href="#") Карта сайта
-					.col
+					.col.d-none.d-md-block
 						+e.menu-row.row
 							.col.col-xl-auto.d-none.d-md-block
 								+e.title Каталог
@@ -33,14 +33,15 @@ mixin footer()
 									li: a(href="#") Блог
 
 							.col.col-xl-auto.d-none.d-xxl-block
-								ul
+								
+								ul.text-semibold
 									li: a(href="#") Прайс-лист
 									li: a(href="#") Калькулятор
 									li: a(href="#") Контакты
 
 					.col-md-auto
 						+e.contacts
-							+e.tel(href="tel:+74955107785") +7 (495) 510-77-85
+							+e.tel.h5(href="tel:+74955107785") +7 (495) 510-77-85
 								+img('img/svg/whatsapp.svg').img-svg-js
 							+e.schedule Ежедневно с 8:00 до 20:00
 							+e.btn.btn.btn-outline-primary(href="#") Заказать звонок

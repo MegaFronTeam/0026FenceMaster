@@ -9,6 +9,9 @@
 		font-size: rem(14);
 	}
 	@include media-breakpoint-up(lg) {
+		font-size: rem(15);
+	}
+	@include media-breakpoint-up(xl) {
 		font-size: rem(16);
 		line-height: 125%;
 	}
@@ -31,7 +34,11 @@
 		--bs-gutter-y: #{rem(18)};
 	}
 	&__logo-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		@include media-breakpoint-up(md) {
+			align-items: start;
 			margin-top: rem(-6);
 		}
 		@include media-breakpoint-up(lg) {
@@ -40,7 +47,9 @@
 	}
 	&__subtitle {
 		margin-bottom: rem(18);
+		text-align: center;
 		@include media-breakpoint-up(md) {
+			text-align: left;
 			max-width: 15em;
 		}
 		@include media-breakpoint-up(lg) {
@@ -93,12 +102,30 @@
 	&__title {
 		font-weight: 600;
 		margin-bottom: rem(18);
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(24);
 		}
 	}
 	&__tel {
 		margin-bottom: rem(12);
+		&:hover {
+			color: $primary;
+		}
+		img, svg {
+			width: rem(24);
+			height: auto;
+			margin-left: rem(12);
+		}
+	}
+	&__adress {
+		margin-bottom: 0;
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(18);
+			text-align: left;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
 	}
 
 	&__bottom {
@@ -106,6 +133,9 @@
 		padding: rem(36) 0;
 		@include media-breakpoint-up(lg) {
 			padding: rem(26) 0;
+		}
+		@include media-breakpoint-only(md) {
+			font-size: rem(13);
 		}
 		p {
 			margin-bottom: 0;
@@ -155,10 +185,61 @@
 			align-items: flex-end;
 			max-width: rem(240);
 		}
+		.requisites {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+	}
+	&__btn {
+		--bs-btn-padding-y: #{rem(10)};
+		--bs-btn-padding-x: #{rem(22)};
+		--bs-btn-font-size: #{rem(12)};
+		--bs-btn-line-height: 1.3;
+		--bs-btn-border-radius: #{$border-radius-sm};
+		--bs-btn-font-weight: 600;
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(md) {
+			--bs-btn-padding-y: #{rem(12)};
+			// --bs-btn-padding-x: #{rem(22)};
+			--bs-btn-font-size: #{rem(16)};
+			--bs-btn-line-height: 1.25;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
 	}
 	&__menu-row {
 		justify-content: space-around;
 		flex-wrap: nowrap;
+		ul {
+			@include media-breakpoint-up(md) {
+				max-width: rem(240);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.text-semibold{
+				font-weight: 600;
+			}
+			li {
+				margin-bottom: rem(10);
+				@include media-breakpoint-up(xl) {
+					margin-bottom: rem(12);
+
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+				a {
+					display: inline-block;
+					color: $body-color;
+					&:hover {
+						color: $primary;
+					}
+				}
+			}
+		}
 	}
 	//
 	@include media-breakpoint-up(xl) {
