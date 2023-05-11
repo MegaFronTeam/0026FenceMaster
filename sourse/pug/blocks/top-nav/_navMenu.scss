@@ -17,7 +17,8 @@
 		// margin-right: 0;
 		// padding: 0;
 	}
-	a{
+	a, span{
+		cursor: pointer;
 		display: block;
 		padding: rem(6) rem(12);
 		font-size: rem(12);
@@ -42,7 +43,7 @@
 			}
 		}
 		&.active {
-			& > a {
+			& > a, span {
 				@include media-breakpoint-down(xxl) {
 					background-color: $gray-100;
 					color: $primary;
@@ -89,7 +90,7 @@
 			pointer-events: none;
 			list-style: none;
 			text-align: left;
-			display: flex;
+			display: flex !important;
 			align-items: center;
 			flex-wrap: wrap;
 			padding: rem(48) rem(60);
@@ -213,7 +214,7 @@
 			}
 		}
 		&__inner {
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + #{rem(19)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
@@ -239,9 +240,9 @@
 			margin: 0;
 			border-top: 1px solid $gray-300;
 			width: 100%;
-			a {
+			a, span {
 				// font-size: 16px;
-
+				@include mt;
 				padding: rem(18) rem(40) rem(18) rem(18);
 				display: block;
 				border-radius: 0;
@@ -255,7 +256,7 @@
 			}
 		}
 		.menu-item-has-children {
-			& > a {
+			& > a, span {
 				position: relative;
 				&:after {
 					@include mt;
@@ -272,6 +273,30 @@
 					top: 50%;
 					transform: translateY(-50%);
 				}
+			}
+		}
+		.contact-us {
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+			&__head {
+				display: none;
+			}
+			&__body {
+				position: static;
+				display: block !important;
+				transform: none;
+				border: none;
+				box-shadow: none;
+				width: 100%;
+				padding-top: 0;
+				padding-bottom: rem(18);
+			}
+			.soc {
+				margin-bottom: 0;
+			}
+			&__address, &__work, &__email, .requisites{
+				display: none;
 			}
 		}
 	}

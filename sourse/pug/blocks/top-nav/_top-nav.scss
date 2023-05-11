@@ -51,22 +51,6 @@
 		@include media-breakpoint-down(lg) {
 			--bs-btn-padding-y: #{rem(3)};
 			--bs-btn-padding-x: #{rem(3)};
-			--bs-btn-color: #fff;
-			--bs-btn-bg: #{$primary};
-			--bs-btn-hover-color: #{$primary};
-			--bs-btn-hover-bg: #fff;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			.icon {
-				font-size: rem(20);
-			}
-		}
-		.icon {
-			@include media-breakpoint-up(lg) {
-				display: none;
-			}
 		}
 	}
 	&__city {
@@ -77,15 +61,15 @@
 		font-size: rem(12);
 		line-height: 1.35;
 		font-weight: 500;
-		padding: rem(8) rem(12);
+		padding: rem(5.5) rem(11.5);
 		border-radius: 6px;
 		background-color: transparent;
 		&:hover {
 			background-color: $gray-100;
 		}
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			font-size: rem(16);
-			padding: rem(5.5) rem(11.5);
+			padding: rem(8) rem(12);
 		}
 		.icon {
 			color: $primary;

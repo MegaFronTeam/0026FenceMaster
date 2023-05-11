@@ -80,6 +80,28 @@ mixin categoryItem(img, title, price)
 mixin contactUs()
 	+b.contact-us
 		+e.head
-			| +7 (495) 510-77-85
-			+icon('chevronDown')
+			+e.wrap
+				| +7 (495) 510-77-85
+				+icon('chevronDown')
+			+icon('call')
 		+e.body
+			+soc
+				+item-sos('', 'tel:+74955107785').--tel
+					+icon('call')
+					span.d-none.d-lg-block Позвонить
+					span.d-lg-none +7 (495) 510-77-85
+				+item-sos()
+					+img('img/svg/whatsapp.svg').img-svg-js
+				+item-sos()
+					+img('img/svg/viber.svg').img-svg-js
+				+item-sos()
+					+img('img/svg/telegram.svg').img-svg-js
+			+e.address(href='#') 125481, г. Москва, ул. Фомичевой, д. 16, корп. 3, эт. 1, пом. 252, оф. 2к.
+			+e.work Работаем без выходных<br>с 8:00 до 20:00
+			+e.email(href='mailto:info@masterazoborov.ru') info@masterazoborov.ru
+			+downloadRequisites
+
+mixin downloadRequisites()
+	a.requisites(href='#')
+		+icon('attach')
+		| Скачать реквизиты
