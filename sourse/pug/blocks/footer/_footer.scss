@@ -9,6 +9,9 @@
 		font-size: rem(16);
 		line-height: 125%;
 	}
+	ul {
+		list-style: none;
+	}
 	&__top {
 		padding-top: rem(48);
 		padding-bottom: rem(36);
@@ -23,9 +26,11 @@
 	}
 	&__subtitle {
 		margin-bottom: rem(18);
+		@include media-breakpoint-up(md) {
+			max-width: 15em;
+		}
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(24);
-			max-width: 15em;
 		}
 	}
 	&__logo {
