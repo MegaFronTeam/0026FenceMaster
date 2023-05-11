@@ -5,12 +5,14 @@
 		text-align: center;
 		@include roww(6px, m);
 		flex-wrap: wrap;
+		border-bottom: none;
 	}
 
 	list-style: none;
 	// position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
+	border-bottom: 1px solid $gray-300;
 	li{
 		
 		// margin-left: 0;
