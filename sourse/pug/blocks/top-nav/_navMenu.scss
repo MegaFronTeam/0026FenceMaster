@@ -372,7 +372,7 @@
 				width: calc(100% - var(--bs-gutter-x));
 				border-top: none;
 				@include media-breakpoint-up(sm) {
-					width: calc(50%);
+					width: calc(50% - var(--bs-gutter-x));
 				}
 			}
 			.catalog-dropdown__item {
