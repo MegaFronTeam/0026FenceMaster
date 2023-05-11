@@ -4,11 +4,16 @@ mixin mnu()
 		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 			each link in nav
 				if link.name
-					li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
+					if link.name == 'Каталог'
+						li.menu-item.menu-item-has-children.dropdown-js(itemprop="item" )
+							a(href= link.url itemprop="url")= link.name
+							+catalogDropdown()
+					else
+						li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
 				if link.subnav
-					li.menu-item.menu-item-has-children
-						a(href="#")= link.subname
-						ul.sub-menu
+					li.menu-item.menu-item-has-children.dropdown-js
+						span= link.subname
+						ul.sub-menu.dropdown-body-js
 							each sublink in link.subnav
 								li.menu-item(itemprop="item" )
 									a(href= '#' itemprop="url")= sublink.name

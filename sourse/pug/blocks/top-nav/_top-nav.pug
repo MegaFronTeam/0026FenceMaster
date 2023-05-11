@@ -29,17 +29,16 @@ mixin top-nav()
 						.menu-mobile.menu-mobile--js
 							.menu-mobile__inner
 								//- +menu-toggle()
+								+contactUs
 								+mnu()
-					.col-auto.d-none.d-lg-block
+					.col-auto.d-none.d-sm-block
 						+e.city(data-src='#modal-call' data-fancybox).btn-modal-js
 							| Москва
 							+icon('chevronDown')
-					.col-auto.d-none.d-lg-block
-						+contactUs
 					.col-auto
-						+e.btn.btn.btn-outline-primary(href="#") 
-							span.d-none.d-lg-block Заказать звонок
-							+icon('call')
+						+contactUs
+					.col-auto.d-none.d-lg-block
+						+e.btn.btn.btn-outline-primary(href="#") Заказать звонок
 					.col-auto.d-xxl-none
 						+menu-toggle()
 	// end top-nav

@@ -1,5 +1,5 @@
 mixin item-sos(icon, a='#')
-	+e.A.item(href= a target="_blank")
+	+e.A.item&attributes(attributes)(href= a target="_blank")
 		if block
 			block
 		else
