@@ -63,6 +63,7 @@ body {
 		// background-color: $body-color;
 		background-color: rgba(55, 51, 49, 0.48);
 		opacity: 0;
+		pointer-events: none;
 		z-index: 100;
 		// left: 200px;
 		left: 0;
@@ -94,6 +95,7 @@ body {
 	&.blurBg {
 		&::before {
 			opacity: 1;
+			pointer-events: all;
 		}
 	}
 }
