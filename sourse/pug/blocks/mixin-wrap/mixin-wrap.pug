@@ -105,3 +105,37 @@ mixin downloadRequisites()
 	a.requisites(href='#')
 		+icon('attach')
 		| Скачать реквизиты
+
+mixin catalogDropdown()
+	+b.catalog-dropdown.dropdown-body-js
+		.row
+			.col-xxl
+				ul.catalog-dropdown__card-list
+					mixin item(img, text)
+						li
+							+e.item(href="#")
+								+img(`img/svg/sTypes-${img}.svg`).img-svg-js
+								!= text
+					+item(1, `Заборы из профнастила`)
+					+item(6, `Заборы из профнастила`)
+					+item(2, `Заборы из евроштакетника`)
+					+item(7, `Заборы из евроштакетника`)
+					+item(3, `Заборы сетки рабицы`)
+					+item(8, `Заборы сетки рабицы`)
+					+item(4, `Заборы из 3Д сетки`)
+					+item(9, `Заборы из 3Д сетки`)
+					+item(5, `Заборы из 3Д сетки`)
+			+e.col-list.col-xxl-auto
+				ul.catalog-dropdown__list
+					li: a(href="#") Для дачи 
+					li: a(href="#") Для коттеджей
+					li: a(href="#") Для частного дома
+					li: a(href="#") На винтовых сваях
+					li: a(href="#") Откатные ворота
+					li: a(href="#") Распашные ворота
+					li: a(href="#") Каркас
+					li: a(href="#") Пункт 1
+					li: a(href="#") Пункт 2
+					li: a(href="#") Пункт 3
+					li: a(href="#") Пункт 4
+					li: a(href="#") Пункт 5

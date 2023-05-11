@@ -87,7 +87,7 @@ const JSCCommon = {
 		);
 
 		window.addEventListener('resize', () => {
-			if (window.matchMedia('(min-width: 992px)').matches) this.closeMenu();
+			if (window.matchMedia('(min-width: 1452px)').matches) this.closeMenu();
 		},
 			{ passive: true },
 		);
@@ -500,8 +500,8 @@ function eventHandler() {
 		let submenuTarget = event.target.closest('.dropdown-js');
 		if(submenuTarget) {
 			if (window.matchMedia('(max-width: 1452px)').matches) {
-				$('.dropdown-js').toggleClass('active');
-				$('.dropdown-body-js').slideToggle();
+				submenuTarget.classList.toggle('active');
+				$(submenuTarget.querySelector('.dropdown-body-js')).slideToggle();
 			}
 		};
 
