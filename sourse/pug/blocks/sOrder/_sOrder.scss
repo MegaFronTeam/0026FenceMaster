@@ -79,9 +79,25 @@
 		&__row {
 			--bs-gutter-y: var(--bs-gutter-x);
 		}
+		&__input {
+			@include media-breakpoint-down(md) {
+				font-size: rem(12);
+				line-height: 1.35;
+				padding: rem(15) rem(17);
+				border-radius: rem(8);
+			}
+		}
 		&__btn {
 			width: 100%;
+			@include media-breakpoint-down(md) {
+				--bs-btn-padding-y: #{rem(14)};
+				--bs-btn-padding-x: #{rem(14)};
+				--bs-btn-font-size: #{rem(12)};
+				--bs-btn-line-height: 1.35;
+				--bs-btn-border-radius: #{rem(8)};
+			}
 		}
+
 		&__policy {
 			margin-top: rem(12);
 			@include media-breakpoint-up(md) {

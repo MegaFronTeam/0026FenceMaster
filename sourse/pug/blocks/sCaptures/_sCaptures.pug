@@ -1,0 +1,21 @@
+mixin sCapturesItem(h, btn)
+	+e.item&attributes(attributes)
+		+b.section-title
+			h2!= h
+		+e.content
+			block
+		+e.btn.btn.btn-primary(href="#")!= btn
+
+
+mixin sCaptures(data)
+	// start sCaptures
+	+b.SECTION.sCaptures.section#sCaptures&attributes(attributes)
+		.container
+			+e.row.row
+				.col-lg-6
+					+sCapturesItem(`Ограждение <br> <span> в&nbsp;кредит </span>`, `Оставить заявку`).--dark
+
+				.col-lg-6
+					+sCapturesItem(`Калькулятор <br> <span> стоимости </span>`, `Перейти в&nbsp;калькулятор`).--light
+
+	// end sCaptures
