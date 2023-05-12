@@ -44,7 +44,7 @@ mixin page-head(t,...items)
 		.container
 			+breadcrumb('Главная',...items)
 
-			h1= t
+			h1!= t
 
 mixin parts(elem)
 	script.
@@ -52,14 +52,17 @@ mixin parts(elem)
 	div(id=`${elem}Wrap`)
 
 mixin customAlert(icon, text)
-	.custom-alert(role='alert')&attributes(attributes)
-		+icon(`${icon}`)
-		div!= text
+	//- .custom-alert(role='alert')&attributes(attributes)
+	//- 	+icon(`${icon}`)
+	//- 	div!= text
+	.alert.alert-success&attributes(attributes)
+		+img(`img/svg/${icon}.svg`).img-svg-js
+		!= text
 
 mixin topAlert()
 	+b.top-alert
 		.container
-			+customAlert('delivery', 'Осуществляем бесплатную бережную доставку в любой день недели при заказе').custom-alert--success.justify-content-center
+			+customAlert('delivery', 'Осуществляем бесплатную бережную доставку в любой день недели при заказе').justify-content-center
 
 mixin categoryItem(img, title, price)
 	+b.categoryItem
@@ -74,8 +77,6 @@ mixin categoryItem(img, title, price)
 		+e.caption
 			.h5!= title
 			span!= price
-
-
 
 mixin contactUs()
 	+b.contact-us

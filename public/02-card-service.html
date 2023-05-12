@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Главная</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="libs/plyr/plyr.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+							wrap.remove();
+						}
+					);
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="top-alert">
+					<div class="container">
+						<div class="alert alert-success justify-content-center"><img class="img-svg-js" src="img/svg/delivery.svg" alt="" loading="lazy"/>Осуществляем бесплатную бережную доставку в любой день недели при заказе
+						</div>
+					</div>
+				</div>
+				<!-- start sServiceHead-->
+				<section class="sServiceHead section" id="sServiceHead">
+					<div class="container">
+						<div class="sServiceHead__row row">
+							<div class="col-lg-6 ms-lg-auto">
+								<div class="page-head">
+									<div class="container">
+										<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+											<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+												<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+														<meta itemprop="position" content="1"/></a></li>
+												<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Забор из евроштакетника</span>
+														<meta itemprop="position" content="2"/></a></li>
+											</ol>
+										</nav>
+										<h1>Забор из&nbsp;евроштакетника под ключ</h1>
+									</div>
+								</div>
+								<div class="sServiceHead__img-wrap">
+									<div class="img-wrap-center"><img class="object-fit-js" src="img/categoryItem-2.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sServiceHead-->
+				<!-- start sCategories-->
+				<section class="sCategories section" id="sCategories">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>каталог <span>заборов</span></h2>
+						</div>
+						<div class="sCategories__row row">
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-1.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Заборы из&nbsp;профнастила</div><span>от&nbsp;1690&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-2.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Заборы из&nbsp;евроштакетника</div><span>от&nbsp;1350&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-3.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Заборы сетки рабицы</div><span>от&nbsp;1200&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-4.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Заборы из&nbsp;3Д&nbsp;сетки</div><span>от&nbsp;1300&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-5.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Заборы жалюзи</div><span>от&nbsp;1690&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-6.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Ворота откатные и&nbsp;раздвижные</div><span>от&nbsp;1300&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-7.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Секционные заборы</div><span>от&nbsp;1690&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-8.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">кирпичные столбы</div><span>от&nbsp;1350&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-xl-4">
+								<div class="categoryItem">
+									<div class="categoryItem__wrap"><img class="object-fit-js" src="img/categoryItem-9.jpg" alt="" loading="lazy"/>
+										<div class="categoryItem__btns">
+											<div class="categoryItem__row row">
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-outline-white" href="#">Подробнее
+													</a>
+												</div>
+												<div class="col-6 col-lg-12">
+													<a class="categoryItem__btn btn btn-primary" href="#">Сделать заказ
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="categoryItem__caption">
+										<div class="h5">Навесы</div><span>от&nbsp;1300&nbsp;р/м.п</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sCategories-->
+				<!-- start sSteps-->
+				<section class="sSteps section" id="sSteps">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2> <span>8 шагов </span> установки <br> ограждения</h2>
+						</div>
+						<div class="slider-wrapper">
+							<div class="sSteps__slider swiper slider-auto-js">
+								<div class="swiper-wrapper">
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-1.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Размечаем участок
+												</div>
+											</a>
+										</div>
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-2.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Бурим лунки через каждые 2,5&nbsp;м
+												</div>
+											</a>
+										</div>
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-3.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Забиваем и&nbsp;трамбуем столбы грунтом или щебнем
+												</div>
+											</a>
+										</div>
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-4.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Привариваем лаги
+												</div>
+											</a>
+										</div>
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-5.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Устанавливаем ворота и&nbsp;калитку
+												</div>
+											</a>
+										</div>
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-6.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Монтируем необходимый материал
+												</div>
+											</a>
+										</div>
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-7.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Проверяем работу
+												</div>
+											</a>
+										</div>
+										<div class="sSteps__slide swiper-slide">
+											<a class="sSteps__item" href="#">
+												<div class="sSteps__img-wrap"><img class="object-fit-js" src="img/sSteps-8.jpg" alt="" loading="lazy"/>
+												</div>
+												<div class="sSteps__caption">Сдаем готовое ограждение заказчику
+												</div>
+											</a>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sSteps-->
+				<!-- start sAbout-->
+				<section class="sAbout section sAbout sAbout--reverse">
+					<div class="container">
+						<div class="sAbout__row row">
+							<div class="sAbout__col col-lg-6 d-none d-lg-block">
+								<div class="sAbout__img-wrap">
+									<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-2.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="sAbout__content">
+									<h2>почему клиенты <span> выбирают нас </span></h2>
+									<p>Наши заборы&nbsp;&mdash; надежная защита от&nbsp;проникновения посторонних лиц на&nbsp;вашу территорию. Они гармонично дополнят ландшафт. Начинается работа с&nbsp;клиентом с&nbsp;консультации специалиста. Все нюансы заказа сразу обсуждаются.</p>
+									<p>Мы&nbsp;предлагаем весь комплекс мероприятий&nbsp;&mdash; от&nbsp;разработки дизайн-проекта, изготовления изгороди, ее&nbsp;монтажа на&nbsp;участке, до&nbsp;последующего обслуживания конструкции. Вам не&nbsp;придется тратить время и&nbsp;деньги, искать подрядчика&nbsp;&mdash; компанию, которая занимается доставкой материала по&nbsp;вашему адресу, а&nbsp;затем установкой готового ограждения. Мы&nbsp;сделаем все сами. Изготовляем недорогие заборы для дачи, цена с&nbsp;установкой намного дешевле, нежели у&nbsp;конкурентов.</p>
+									<p>Если для монтажа требуется создать фундамент, самостоятельно выполним эти работы. Выберем тип фундамента под вашу изгородь. Применяем качественные материалы от&nbsp;проверенных поставщиков.</p>
+									<a class="sAbout__btn btn btn-outline-primary" href="#">Перейти в&nbsp;услуги
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sAbout-->
+				<!-- start sAbout-->
+				<section class="sAbout section">
+					<div class="container">
+						<div class="sAbout__row row">
+							<div class="sAbout__col col-lg-6 d-none d-lg-block">
+								<div class="sAbout__img-wrap">
+									<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-1.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="sAbout__content">
+									<h2>о компании <span> мастерзабор </span></h2>
+									<p>Компания &laquo;Лига заборов&raquo; предлагает купить забор в&nbsp;Москве с&nbsp;установкой под ключ по&nbsp;доступным ценам. Мы&nbsp;имеем огромный опыт производства и&nbsp;установки ограждений любого типа. На&nbsp;все виды заборов распространяется гарантия от&nbsp;2х&nbsp;лет. В&nbsp;удобное для вас время, на&nbsp;объект приедет специалист для проведения замера и&nbsp;расчета стоимости забора. Благодаря профессионализму и&nbsp;опыту наших мастеров, изгородь станет не&nbsp;только надежной защитой вашего дома, но&nbsp;и&nbsp;придаст участку завершенный вид.</p>
+									<p>Наши мастера выполнят строительство недорогих заборов для загородных домов, дач, коттеджей в&nbsp;Московской области. Заказчик получит полный комплекс работ. Ограждения выполняются из&nbsp;металла, дерева, кирпича, бетона. Поможем определиться с&nbsp;выбором материала, а&nbsp;также с&nbsp;видом изгороди для дачного участка. Для заказа услуги достаточно позвонить на&nbsp;наш номер телефона или заполнить заявку по&nbsp;форме обратной связи на&nbsp;сайте.</p>
+									<a class="sAbout__btn btn btn-outline-primary" href="#">Подробнее о&nbsp;компании
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sAbout-->
+				<!-- start sAbout-->
+				<section class="sAbout section">
+					<div class="container">
+						<div class="sAbout__row row">
+							<div class="sAbout__col col-lg-6 d-none d-lg-block">
+								<div class="sAbout__img-wrap">
+									<div class="img-wrap-center"><img class="object-fit-js" src="img/sAbout-3.jpg" alt="" loading="lazy"/>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="sAbout__content">
+									<h2>строительство ограждений <span> от&nbsp;профессионалов </span></h2>
+									<p>Компания &laquo;Лига заборов&raquo; предлагает купить забор в&nbsp;Москве с&nbsp;установкой под ключ по&nbsp;доступным ценам. Мы&nbsp;имеем огромный опыт производства и&nbsp;установки ограждений любого типа. На&nbsp;все виды заборов распространяется гарантия от&nbsp;2х&nbsp;лет. В&nbsp;удобное для вас время, на&nbsp;объект приедет специалист для проведения замера и&nbsp;расчета стоимости забора. Благодаря профессионализму и&nbsp;опыту наших мастеров, изгородь станет не&nbsp;только надежной защитой вашего дома, но&nbsp;и&nbsp;придаст участку завершенный вид.</p>
+									<p>Наши мастера выполнят строительство недорогих заборов для загородных домов, дач, коттеджей в&nbsp;Московской области. Заказчик получит полный комплекс работ. Ограждения выполняются из&nbsp;металла, дерева, кирпича, бетона. Поможем определиться с&nbsp;выбором материала, а&nbsp;также с&nbsp;видом изгороди для дачного участка. Для заказа услуги достаточно позвонить на&nbsp;наш номер телефона или заполнить заявку по&nbsp;форме обратной связи на&nbsp;сайте.</p>
+									<a class="sAbout__btn btn btn-outline-primary" href="#">Оставить заявку
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sAbout-->
+				<!-- start sOrder-->
+				<section class="sOrder section" id="sOrder">
+					<div class="container">
+						<div class="sOrder__wrap"><img src="img/sOrder-bg-2.png" alt="" loading="lazy"/>
+							<div class="form-wrap">
+								<form>
+									<div class="section-title">
+										<h2> <span>заказать подбор</span> ограждения</h2>
+										<p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время!</p>
+									</div>
+									<div class="form-wrap__row row">
+										<div class="col-md-6">
+											<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон"/>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-md-6">
+											<button class="form-wrap__btn btn btn-primary">Отправить заявку
+											</button>
+										</div>
+									</div>
+									<div class="form-wrap__policy">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text">Я ознакомился с условиями обработки <a href="#">персональных данных</a></span>
+										</label>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sOrder-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/plyr/plyr.polyfilled.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

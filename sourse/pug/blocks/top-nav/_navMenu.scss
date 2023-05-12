@@ -447,6 +447,7 @@
 					padding: 0;
 					text-align: left;
 					font-size: rem(12);
+					max-width: max-content;
 					@include media-breakpoint-up(lg) {
 						font-size: rem(16);
 					}
