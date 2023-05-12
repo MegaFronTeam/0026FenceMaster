@@ -97,9 +97,41 @@
 	}
 }
 
-.breadcrumb-item {
-	width: auto;
-	margin-right: rem(32);
+.breadcrumb-slider--js {
+	margin-bottom: rem(18);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: var(--bs-breadcrumb-margin-bottom);
+	}
+}
+
+.breadcrumb {
+	--bs-breadcrumb-divider-color: #{$gray-600};
+	--bs-breadcrumb-item-active-color: #{$gray-900};
+
+	padding-left: 0;
+	&-item {
+		width: auto;
+		// margin-right: rem(32);
+		a {
+			color: var(--bs-breadcrumb-divider-color);
+			&:hover {
+				color: $primary;
+			}
+		}
+		&.active {
+			a {
+				color: var(--bs-breadcrumb-item-active-color);
+			}
+		}
+		& + & {
+			display: flex;
+			align-items: center;
+			&:before {
+				width: rem(25);
+				height: rem(20);
+			}
+		}
+	}
 }
 
 .alert {
