@@ -254,7 +254,7 @@
 			height: 100%;
 			left: 0;
 			top: 0;
-			background-color: rgba(55, 51, 49, 0.48);
+			background-color: rgba(55, 51, 49, 0.12);
 			z-index: -1;
 			pointer-events: none;
 		}
@@ -322,6 +322,7 @@
 		.h5 {
 			@include mt;
 			margin-bottom: rem(6);
+			line-height: 1.2;
 			@include media-breakpoint-between(sm, lg) {
 				font-size: rem(18);
 			}

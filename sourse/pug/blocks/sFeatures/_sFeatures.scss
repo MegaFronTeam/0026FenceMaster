@@ -3,6 +3,9 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	@include media-breakpoint-up(xxl) {
+		--sTPB: #{rem(60)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(24)};
@@ -25,6 +28,7 @@
 		height: 100%;
 		h5 {
 			margin-bottom: rem(6);
+			line-height: 1.2;
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(12);
 			}

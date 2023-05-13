@@ -33,11 +33,11 @@ mixin footer()
 									li: a(href="#") Блог
 
 							.col.col-xl-auto.d-none.d-xxl-block
-								
-								ul.text-semibold
-									li: a(href="#") Прайс-лист
-									li: a(href="#") Калькулятор
-									li: a(href="#") Контакты
+								+e.short-menu
+									ul
+										li: a(href="#") Прайс-лист
+										li: a(href="#") Калькулятор
+										li: a(href="#") Контакты
 
 					.col-md-auto
 						+e.contacts

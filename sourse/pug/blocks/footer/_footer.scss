@@ -26,7 +26,7 @@
 			padding: rem(66) 0;
 		}
 		@include media-breakpoint-up(lg) {
-			padding: rem(72) 0;
+			padding: rem(72) 0 rem(60);
 		}
 	}
 	&__row {
@@ -111,7 +111,8 @@
 		&:hover {
 			color: $primary;
 		}
-		img, svg {
+		img,
+		svg {
 			width: rem(24);
 			height: auto;
 			margin-left: rem(12);
@@ -181,8 +182,8 @@
 		align-items: center;
 		text-align: center;
 		@include media-breakpoint-up(md) {
-			text-align: right;
-			align-items: flex-end;
+			text-align: left;
+			align-items: flex-start;
 			max-width: rem(240);
 		}
 		.requisites {
@@ -199,6 +200,7 @@
 		--bs-btn-border-radius: #{$border-radius-sm};
 		--bs-btn-font-weight: 600;
 		margin-bottom: rem(18);
+		white-space: nowrap;
 		@include media-breakpoint-up(md) {
 			--bs-btn-padding-y: #{rem(12)};
 			// --bs-btn-padding-x: #{rem(22)};
@@ -219,14 +221,11 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
-			&.text-semibold{
-				font-weight: 600;
-			}
+
 			li {
 				margin-bottom: rem(10);
 				@include media-breakpoint-up(xl) {
 					margin-bottom: rem(12);
-
 				}
 				&:last-child {
 					margin-bottom: 0;
@@ -238,6 +237,14 @@
 						color: $primary;
 					}
 				}
+			}
+		}
+	}
+	&__short-menu {
+		ul {
+			font-weight: 600;
+			@include media-breakpoint-up(xl) {
+				min-width: rem(148);
 			}
 		}
 	}

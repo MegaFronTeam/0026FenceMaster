@@ -40,6 +40,7 @@
 		@include media-breakpoint-up(xxl) {
 			padding: rem(60);
 		}
+
 		&.sCaptures__item--dark {
 			background-color: $gray-800;
 			color: $white;
@@ -104,7 +105,7 @@
 			}
 			@include media-breakpoint-up(xxl) {
 				left: 65%;
-				top: 60%;
+				top: 61%;
 			}
 		}
 	}
@@ -126,10 +127,19 @@
 	&__content {
 		.row {
 			--bs-gutter-y: #{rem(12)};
+			margin-bottom: rem(18);
 			@include media-breakpoint-up(md) {
 				--bs-gutter-y: #{rem(24)};
 			}
+			@include media-breakpoint-only(md) {
+				justify-content: center;
+				margin-top: 0;
+			}
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: #{rem(48)};
+			}
 		}
+
 		& > p {
 			font-size: 14px;
 			line-height: 130%;
