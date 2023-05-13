@@ -28,11 +28,12 @@
 
 		@include media-breakpoint-up(md) {
 			min-height: rem(596);
-			padding: rem(48);
+			// padding: rem(48);
 			border-radius: $border-radius-lg;
 		}
 		@include media-breakpoint-only(lg) {
-			padding: rem(36);
+			// padding: rem(36);
+			// padding: 5.56%;
 		}
 		@include media-breakpoint-up(xl) {
 			text-align: left;
@@ -69,8 +70,8 @@
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 0;
 			position: absolute;
-			bottom: rem(48);
-			right: rem(48);
+			bottom: 5.56%;
+			right: 5.56%;
 			margin-left: 0;
 			margin-right: 0;
 		}
