@@ -27,6 +27,7 @@
 			top: 0;
 			right: calc(100% + var(--bs-gutter-x) + rem(24));
 			margin-bottom: 0;
+			// max-width: calc(100% - var(--bs-gutter-x) - rem(36));
 		}
 		&:after {
 			content: '';

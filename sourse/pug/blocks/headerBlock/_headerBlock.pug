@@ -1,11 +1,17 @@
-mixin headerBlock()
+mixin headerBlock(img, h, btn, date)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			+e.wrapper.bg-wrap
-				+img('img/headerBlock-bg-1.jpg', 'bg')
+				+img(`img/headerBlock-bg-${img}.jpg`, 'bg')
+				//- +img('img/headerBlock-bg-1.jpg', 'bg')
+				block
 				+b.section-title.text-center
-					h1 Изготовление и&nbsp;установка ограждений под ключ в&nbsp;Москве и&nbsp;МО
-				+e.btn.btn.btn-primary(href="#") Вызвать замерщика
-			
+					h1!= h
+					//- h1 Изготовление и&nbsp;установка ограждений под ключ в&nbsp;Москве и&nbsp;МО
+				if btn
+					+e.btn.btn.btn-primary(href="#")!= btn
+					//- +e.btn.btn.btn-primary(href="#") Вызвать замерщика
+				if date
+					p!= date
 	// end headerBlock

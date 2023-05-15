@@ -20,7 +20,8 @@
 		align-items: center;
 		justify-content: center;
 		padding: rem(90);
-		background-color: secondary;
+		color: $white;
+		background-color: $secondary;
 		border-radius: $border-radius-lg;
 		overflow: hidden;
 		// margin-bottom: rem(24);
@@ -50,11 +51,20 @@
 			z-index: -2;
 			// object-position: top;
 		}
+		p {
+			margin-top: rem(18);
+			@include media-breakpoint-up(md) {
+				margin-top: rem(24);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 	.section-title {
-		color: $white;
+		margin-bottom: 0;
 		h1 {
-			max-width: 16em;
+			max-width: 16.33em;
 		}
 	}
 	&__btn {
@@ -63,6 +73,7 @@
 		--bs-btn-padding-y: #{rem(19)};
 		--bs-btn-font-size:  #{rem(14)};
 		--bs-btn-line-height: 1.3;
+		margin-top: var(--sTPB);
 		@include media-breakpoint-up(md) {
 			width: rem(276);
 			--bs-btn-padding-y: #{rem(23)};
