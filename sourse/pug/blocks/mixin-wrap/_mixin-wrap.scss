@@ -156,7 +156,7 @@
 	}
 	&-success {
 		--bs-alert-color: #{$gray-900};
-    --bs-alert-bg: #{$green-100};
+		--bs-alert-bg: #{$green-100};
 		svg {
 			color: #{$green};
 		}
@@ -225,6 +225,20 @@
 		.h5 {
 			color: $primary;
 		}
+		.categoryItem__wrap {
+			&::after {
+				background-color: rgba(55, 51, 49, 0.48);
+			}
+		}
+	}
+	&.categoryItem--square {
+		.categoryItem {
+			&__wrap {
+				@include media-breakpoint-up(xl) {
+					--ratio: 1/1;
+				}
+			}
+		}
 	}
 	&__wrap {
 		@include block(300, 456);
@@ -239,7 +253,7 @@
 		@include media-breakpoint-up(sm) {
 			padding: var(--wrapPad);
 		}
-		
+
 		img {
 			@include mt;
 			position: absolute;
@@ -249,6 +263,7 @@
 		}
 		&::after {
 			content: "";
+			@include mt;
 			position: absolute;
 			width: 100%;
 			height: 100%;
@@ -257,6 +272,9 @@
 			background-color: rgba(55, 51, 49, 0.12);
 			z-index: -1;
 			pointer-events: none;
+			@include media-breakpoint-down(lg) {
+				background-color: rgba(55, 51, 49, 0.48);
+			}
 		}
 	}
 	&__btns {
@@ -290,7 +308,7 @@
 			--bs-btn-hover-border-color: #{$white};
 			--bs-btn-active-color: #{$white};
 			--bs-btn-active-border-color: #{$white};
-			--bs-btn-disabled-color:  #{$body-color};
+			--bs-btn-disabled-color: #{$body-color};
 			--bs-btn-disabled-bg: #{$light};
 			--bs-btn-disabled-border-color: #{$light};
 		}
@@ -300,7 +318,7 @@
 			--bs-btn-hover-border-color: #{$white};
 			// --bs-btn-active-color: #{$primary};
 			// --bs-btn-active-border-color: #{$light};
-			--bs-btn-disabled-color:  #{$body-color};
+			--bs-btn-disabled-color: #{$body-color};
 			--bs-btn-disabled-bg: #{$light};
 			--bs-btn-disabled-border-color: #{$light};
 		}
@@ -435,7 +453,7 @@
 			opacity: 0;
 			pointer-events: none;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				width: 100%;
 				height: 40px;

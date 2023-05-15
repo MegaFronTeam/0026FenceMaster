@@ -1,7 +1,11 @@
-mixin sStocks(data)
+mixin sStocks(title)
 	// start sStocks
 	+b.sStocks.section#sStocks&attributes(attributes)
 		.container
+			if title
+				+b.section-title.text-center
+					h2 наши 
+						span акции
 			.slider-wrapper
 				+e.slider.swiper.slider-auto-js
 						.swiper-wrapper

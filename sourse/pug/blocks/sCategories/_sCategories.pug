@@ -26,3 +26,32 @@ mixin sCategories(data)
 					+categoryItem(`categoryItem-9.jpg`, `Навесы`, `от&nbsp;1300&nbsp;р/м.п`)
 
 	// end sCategories
+
+mixin sCategories2(data)
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2
+					span виды забора
+					br
+					|  из&nbsp;евроштакетника
+			+e.row.row
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-1.jpg`, `Односторонний`, `от&nbsp;1690&nbsp;р/м.п`).--square
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-2.jpg`, `Двухсторонний`, `от&nbsp;1690&nbsp;р/м.п`).--square
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-4.jpg`, `М-образный`, `от&nbsp;1690&nbsp;р/м.п`).--square
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-3.jpg`, `П-образный`, `от&nbsp;1690&nbsp;р/м.п`).--square
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-7.jpg`, `Полукруглый`, `от&nbsp;1690&nbsp;р/м.п`).--square
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-5.jpg`, `С&nbsp;откатными воротами`, `от&nbsp;1690&nbsp;р/м.п`).--square
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-9.jpg`, `Шахматкой`, `от&nbsp;1690&nbsp;р/м.п`).--square
+				.col-md-6.col-xl-4.col-xxl-3
+					+categoryItem(`categoryItem-6.jpg`, `На&nbsp;винтовых сваях`, `от&nbsp;1690&nbsp;р/м.п`).--square
+
+	// end sCategories
