@@ -1,9 +1,10 @@
 // start .sTypes
 .sTypes {
-	--sPT: 0;
+	--sPT: #{rem(18)};
 	--sPB: #{rem(24)};
 	// --sTPB: #{rem()};
 	@include media-breakpoint-up(md) {
+		--sPT: #{rem(24)};
 		--sPB: #{rem(32)};
 	}
 	// &__row{

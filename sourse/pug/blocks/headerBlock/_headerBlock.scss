@@ -1,20 +1,25 @@
 // start .headerBlock
 .headerBlock {
 	--sPT: #{rem(18)};
-	--sPB: #{rem(18)};
+	// --sPB: #{rem(18)};
 	--sTPB: #{rem(12)};
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(24)};
-		--sPB: #{rem(24)};
+		// --sPB: #{rem(24)};
 		--sTPB: #{rem(36)};
 	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
+	.breadcrumb {
+		--bs-breadcrumb-divider-color: rgba(255, 255, 255, 0.48);
+		--bs-breadcrumb-item-active-color: #FFFFFF;
+	}
 	&__wrapper {
+		--bs-breadcrumb-margin-bottom: #{rem(18)};
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -25,6 +30,7 @@
 		border-radius: $border-radius-lg;
 		overflow: hidden;
 		// margin-bottom: rem(24);
+		min-height: rem(218);
 		@include media-breakpoint-down(xxl) {
 			@include rfs(63px, padding);
 		}
@@ -32,6 +38,16 @@
 			border-radius: $border-radius;
 			padding: rem(36) rem(18);
 			// margin-bottom: rem(18);
+		}
+		@include media-breakpoint-up(sm) {
+			min-height: rem(250);
+		}
+		@include media-breakpoint-up(md) {
+			--bs-breadcrumb-margin-bottom: #{rem(24)};
+			min-height: rem(376);
+		}
+		@include media-breakpoint-up(xxl) {
+			min-height: rem(504);
 		}
 		&::before {
 			content: "";
@@ -49,12 +65,13 @@
 			left: 0;
 			top: 0;
 			z-index: -2;
-			// object-position: top;
 		}
 		p {
 			margin-top: rem(18);
+			font-size: rem(12);
 			@include media-breakpoint-up(md) {
 				margin-top: rem(24);
+				font-size: rem(16);
 			}
 			&:last-child {
 				margin-bottom: 0;
@@ -71,13 +88,13 @@
 		width: rem(288);
 		max-width: 100%;
 		--bs-btn-padding-y: #{rem(19)};
-		--bs-btn-font-size:  #{rem(14)};
+		--bs-btn-font-size: #{rem(14)};
 		--bs-btn-line-height: 1.3;
 		margin-top: var(--sTPB);
 		@include media-breakpoint-up(md) {
 			width: rem(276);
 			--bs-btn-padding-y: #{rem(23)};
-			--bs-btn-font-size:  #{rem(16)};
+			--bs-btn-font-size: #{rem(16)};
 			--bs-btn-line-height: 1.35;
 		}
 	}
