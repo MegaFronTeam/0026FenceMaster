@@ -2,6 +2,7 @@ extends ../layout/main.pug
 
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sOptions/_sOptions.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sStocks/_sStocks.pug
 include ../blocks/sSteps/_sSteps.pug
@@ -19,7 +20,7 @@ include ../blocks/sContent/_sContent.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= '2-card-service.jpg'
 
 block title
 	- let  title= 'Карточка'
@@ -33,6 +34,7 @@ block pagecontent
 		+topAlert()
 		+sServiceHead
 		+sCategories2()
+		+sOptions()
 		+sStocks('title')
 		+sSteps()
 		+sAbout(2, `почему клиенты <span> выбирают нас </span>`).sAbout--reverse
