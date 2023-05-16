@@ -10,3 +10,4 @@
 8.  <https://megafronteam.github.io/0026FenceMaster/public/08-contact.html>
 9.  <https://megafronteam.github.io/0026FenceMaster/public/09-thanks.html>
 10. <https://megafronteam.github.io/0026FenceMaster/public/10-page-404.html>
+11. <https://megafronteam.github.io/0026FenceMaster/public/00-modal.html>

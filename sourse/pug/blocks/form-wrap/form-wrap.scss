@@ -20,6 +20,45 @@
 		width: 100%;
 		display: block;
 	}
+	&__policy {
+		.custom-input {
+			--bs-border-color: #{$gray-300};
+			display: flex;
+			// align-items: center;
+			padding-left: 0;
+			margin-bottom: 0;
+			min-height: unset;
+			&__input {
+				float: none;
+				margin: 0;
+				margin-right: rem(12);
+				flex-shrink: 0;
+				width: rem(24);
+				height: rem(24);
+			}
+			&__text {
+				font-size: rem(12);
+				// line-height: 135%;
+				display: inline-block;
+				@include media-breakpoint-up(md) {
+					font-size: rem(16);
+					// line-height: 125%;
+				}
+				a {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.form-control {
+		&.is-invalid, &.is-valid {
+			background-image: none;
+			padding-right: $input-padding-x;
+			&:focus {
+				box-shadow: 0 6px 12px rgba(5, 5, 5, 0.12);
+			}
+		}
+	}
 }
 
 .parsley-error {

@@ -38,15 +38,15 @@ mixin top-nav()
 									+e.address(href='#') 125481, г. Москва, ул. Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.
 									+e.work Работаем без выходных с 8:00 до 20:00
 									+e.email(href='mailto:info@masterazoborov.ru') info@masterazoborov.ru
-									+e.btn.btn.btn-outline-primary(href="#") Заказать звонок
+									+e.btn.btn.btn-outline-primary(data-src='#modal-call' data-fancybox).btn-modal-js Заказать звонок
 					.col-auto.d-none.d-lg-block
-						+e.city(data-src='#modal-call' data-fancybox).btn-modal-js
+						+e.city(data-src='#modal-city' data-fancybox).btn-modal-js
 							| Москва
 							+icon('chevronDown')
 					.col-auto
 						+contactUs
 					.col-auto.d-none.d-lg-block
-						+e.btn.btn.btn-outline-primary(href="#") Заказать звонок
+						+e.btn.btn.btn-outline-primary(data-src='#modal-call' data-fancybox).btn-modal-js Заказать звонок
 					.col-auto.d-xxl-none
 						+menu-toggle()
 	// end top-nav

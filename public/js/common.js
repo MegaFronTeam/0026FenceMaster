@@ -2,6 +2,7 @@
 const JSCCommon = {
 	modalCall() {
 		const link = '.btn-modal-js';
+
 		Fancybox.bind(link, {
 			arrows: false,
 			// // infobar: false,
@@ -29,18 +30,22 @@ const JSCCommon = {
 				AJAX_FORBIDDEN: "Ошибка при загрузке AJAX: запрещено",
 				IFRAME_ERROR: "Ошибка загрузки iframe",
 			},
+			// on: {
+			// 	"done": fancybox => this.forEditor(fancybox, this.makeTinyMceEditor),
+			// 	"close": fancybox => this.forEditor(fancybox, this.removeEditor),
+			// }
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el => {
-			el.addEventListener("click", () => {
+		document.querySelectorAll(".modal-close-js").forEach(el=>{
+			el.addEventListener("click", ()=>{
 				Fancybox.close();
 			})
 		})
-		Fancybox.bind('[data-fancybox]', {
-			placeFocusBack: false,
-		});
+		// Fancybox.bind('[data-fancybox]', {
+		// 	placeFocusBack: false,
+		// });
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
-			if (!element) return;
+			if(!element) return;
 			let modal = document.querySelector(element.dataset.src);
 			const data = element.dataset;
 
