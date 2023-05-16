@@ -7,6 +7,7 @@ extends ../layout/main.pug
 //- include ../blocks/sStocks/_sStocks.pug
 //- include ../blocks/sSteps/_sSteps.pug
 //- include ../blocks/sFeatures/_sFeatures.pug
+include ../blocks/sThanks/_sThanks.pug
 include ../blocks/sOrder/_sOrder.pug
 //- include ../blocks/sServiceHead/_sServiceHead.pug
 
@@ -32,5 +33,8 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
+		+sThanks(`Добро пожаловать на&nbsp;страницу 404!`, `Скорее всего, это случилось по&nbsp;одной из&nbsp;следующих причин: страница переехала, страницы больше нет или вы&nbsp;допустили небольшую опечатку при&nbsp;вводе&nbsp;адреса.`)
+			h1 К сожалению, запрашиваемая страница 
+				span не найдена
 		+sOrder()
 	+parts('footer')

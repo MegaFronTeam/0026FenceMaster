@@ -1,0 +1,23 @@
+mixin sThanks(welcome, text)
+	// start sThanks
+	+b.SECTION.sThanks.section#sThanks&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				+e.welcome!= welcome
+				block
+				p!= text
+			+e.contacts
+				+e.row.row
+					.col-sm-6
+						+e.contact-link(target="_blank" href="tel:+74955107785")
+							span Позвонить по&nbsp;телефону
+							.h6 +7 (495) 510-77-85
+							+img('img/svg/call.svg').img-svg-js
+					.col-sm-6
+						+e.contact-link(target="_blank" href="tel:+74955107785")
+							span Написать в&nbsp;Whatsapp
+							.h6 +7 (495) 510-77-85
+							+img('img/svg/whatsapp.svg').img-svg-js
+				+e.btn.btn.btn-primary(href="/") Вернуться на главную
+
+	// end sThanks

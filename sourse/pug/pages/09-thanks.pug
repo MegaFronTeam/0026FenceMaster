@@ -7,6 +7,7 @@ extends ../layout/main.pug
 //- include ../blocks/sStocks/_sStocks.pug
 //- include ../blocks/sSteps/_sSteps.pug
 //- include ../blocks/sFeatures/_sFeatures.pug
+include ../blocks/sThanks/_sThanks.pug
 include ../blocks/sOrder/_sOrder.pug
 //- include ../blocks/sServiceHead/_sServiceHead.pug
 
@@ -32,5 +33,9 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
+		+sThanks(`Ура!`, `Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время, но&nbsp;вы&nbsp;можете связаться с&nbsp;нами самостоятельно не&nbsp;дожидаясь звонка:`)
+			h1
+				span Спасибо
+				|  за ваше обращение
 		+sOrder()
 	+parts('footer')

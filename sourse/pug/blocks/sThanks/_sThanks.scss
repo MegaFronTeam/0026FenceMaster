@@ -1,0 +1,137 @@
+// start .sThanks
+.sThanks {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(18)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(36)};
+	}
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	&__contacts {
+		max-width: rem(596);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.section-title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--sTPB);
+		@include media-breakpoint-up(md) {
+			gap: calc(var(--sTPB) * 0.667);
+		}
+		h1 {
+			max-width: 16.35em;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+		p {
+			font-size: rem(12);
+			line-height: 1.5;
+			max-width: 46.5em;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__welcome {
+			font-size: rem(12);
+			line-height: 1.35;
+			color: $secondary;
+			@include media-breakpoint-up(md) {
+				font-size: rem(14);
+				line-height: 1.4;
+			}
+		}
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: var(--sTPB);
+	}
+
+	&__contact-link {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid transparent;
+		padding: rem(11) rem(60) rem(11) rem(17);
+		background-color: $light;
+		border-radius: rem(8);
+		color: $body-color;
+		@include media-breakpoint-up(md) {
+			border-radius: rem(10);
+			padding: rem(14) rem(70) rem(14) rem(23);
+		}
+		&:hover {
+			background-color: $white;
+			border-color: $gray-300;
+		}
+		span {
+			display: block;
+			margin-bottom: rem(6);
+			font-size: rem(12);
+			line-height: 1.35;
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+				line-height: 1.25;
+			}
+		}
+		.h6 {
+			@include media-breakpoint-up(md) {
+				line-height: 1.1;
+			}
+		}
+		img,
+		svg {
+			@include a-cent(y);
+			position: absolute;
+			width: rem(24);
+			height: auto;
+			right: rem(18);
+			@include media-breakpoint-up(md) {
+				right: rem(24);
+			}
+		}
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: 100%;
+		@include media-breakpoint-up(sm) {
+			width: rem(264);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@include media-breakpoint-down(md) {
+			--bs-btn-padding-y: #{rem(14)};
+			--bs-btn-padding-x: #{rem(14)};
+			--bs-btn-font-size: #{rem(12)};
+			--bs-btn-line-height: 1.35;
+			--bs-btn-border-radius: #{rem(8)};
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sThanks
