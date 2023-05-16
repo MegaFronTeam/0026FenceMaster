@@ -1,6 +1,6 @@
 extends ../layout/main.pug
 
-//- include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/headerBlock/_headerBlock.pug
 //- include ../blocks/sCategories/_sCategories.pug
 //- include ../blocks/sOptions/_sOptions.pug
 //- include ../blocks/sAbout/_sAbout.pug
@@ -32,5 +32,7 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
+		+headerBlock(2, `h1. помогаем подобрать навес под авто в загородный дом`, ``, `23 дек 23`)
+			+breadcrumb('Главная', 'Блог', 'Помогаем подобрать навес под авто в загородный дом')
 		+sOrder()
 	+parts('footer')
