@@ -35,8 +35,8 @@ const JSCCommon = {
 			// 	"close": fancybox => this.forEditor(fancybox, this.removeEditor),
 			// }
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -45,7 +45,7 @@ const JSCCommon = {
 		// });
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
-			if(!element) return;
+			if (!element) return;
 			let modal = document.querySelector(element.dataset.src);
 			const data = element.dataset;
 
@@ -344,24 +344,24 @@ const JSCCommon = {
 		convertImages('.img-svg-js');
 	},
 	scrollToTopOfPage(elems) {
-    elems.forEach((elem) => {
-      if (document.querySelector(elem)) {
-        document.addEventListener('scroll', function () {
-            if (window.scrollY > 400) {
-              document.querySelector(elem).classList.add('active');
-            } else {
-              document.querySelector(elem).classList.remove('active');
-            }
-          },
-          { passive: true },
-        );
-      }
-      document.addEventListener('click', function (event) {
-        let scrollTopBtn = event.target.closest(elem);
-        if (scrollTopBtn) window.scrollTo(0, 0);
-      });
-    });
-  },
+		elems.forEach((elem) => {
+			if (document.querySelector(elem)) {
+				document.addEventListener('scroll', function () {
+					if (window.scrollY > 400) {
+						document.querySelector(elem).classList.add('active');
+					} else {
+						document.querySelector(elem).classList.remove('active');
+					}
+				},
+					{ passive: true },
+				);
+			}
+			document.addEventListener('click', function (event) {
+				let scrollTopBtn = event.target.closest(elem);
+				if (scrollTopBtn) window.scrollTo(0, 0);
+			});
+		});
+	},
 	disabledBtn(input = '.form-wrap__policy input', btn = ".form-wrap__btn", parent = ".form-wrap") {
 		$(document).on("change", input, function () {
 			let btnDisabled = $(this).parents(parent).find(btn)
@@ -520,10 +520,14 @@ function eventHandler() {
 		duration: 800
 	});
 
+	$('.btn-close-js').click(function () {
+		$(this).parent().find('.input-search').val(" ");
+	});
+
 	// modal window
 	document.addEventListener('click', (event) => {
 		let submenuTarget = event.target.closest('.dropdown-js');
-		if(submenuTarget) {
+		if (submenuTarget) {
 			if (window.matchMedia('(max-width: 1452px)').matches) {
 				submenuTarget.classList.toggle('active');
 				$(submenuTarget.querySelector('.dropdown-body-js')).slideToggle();
@@ -531,14 +535,14 @@ function eventHandler() {
 		};
 
 		let contactUsTarget = event.target.closest('.contact-us');
-		if(contactUsTarget) {
+		if (contactUsTarget) {
 			if (window.matchMedia('(max-width: 988px)').matches) {
 				$('.contact-us').toggleClass('active');
 				$('.contact-us__body').slideToggle();
 				document.querySelector('body').classList.toggle('blurBg');
 			}
 		}
-		if(!contactUsTarget) {
+		if (!contactUsTarget) {
 			$('.contact-us').removeClass('active');
 			$('.contact-us__body').slideUp();
 			document.querySelector('body').classList.remove('blurBg');
@@ -547,21 +551,23 @@ function eventHandler() {
 	});
 
 	document.addEventListener('mouseover', (event) => {
-		if(event.target.closest('.dropdown-js') && window.matchMedia('(min-width: 1452px)').matches) {
+		if (event.target.closest('.dropdown-js') && window.matchMedia('(min-width: 1452px)').matches) {
 			document.querySelector('body').classList.add('blurBg');
 		};
 
-		if(event.target.closest('.contact-us') && window.matchMedia('(min-width: 988px)').matches) {
+		if (event.target.closest('.contact-us') && window.matchMedia('(min-width: 988px)').matches) {
 			document.querySelector('body').classList.add('blurBg');
 		};
 
-		if(!event.target.closest('.dropdown-js') && !event.target.closest('.contact-us') && window.matchMedia('(min-width: 988px)').matches) {
+		if (!event.target.closest('.dropdown-js') && !event.target.closest('.contact-us') && window.matchMedia('(min-width: 988px)').matches) {
 			document.querySelector('body').classList.remove('blurBg');
 		};
 	});
 	// document.querySelector('.dropdown-js').addEventListener('onmouseenter', function() {
 	// 	document.querySelector('body').classList.add('fixed2');
 	// })
+
+	
 
 };
 if (document.readyState !== 'loading') {
