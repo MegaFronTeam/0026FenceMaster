@@ -11,11 +11,18 @@
 			--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
 		}
 	}
-	.section-title {
-	}
-	&__col {
-	}
-	&__item {
+	// .section-title {
+	// }
+	// &__col {
+	// }
+	// &__item {
+	// }
+
+	.pagination-wrapper {
+		margin-top: rem(24);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(48);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
