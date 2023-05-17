@@ -150,10 +150,11 @@
 			width: rem(40);
 			height: rem(40);
 			border-radius: rem(10);
-			border: 1px solid transparent;
+			border: 1px solid transparent;`
 			&:hover {
 				background-color: var(--hoverBg);
 				border-color: var(--hoverBdc, transparent);
+				color: $primary;
 			}
 		}
 		.icon,
