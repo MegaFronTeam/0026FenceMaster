@@ -1,10 +1,20 @@
 mixin sContent()
 	// start sContent
 	+b.sContent.section#sContent&attributes(attributes)
-		.container
+		+e.container.container
 			//- +b.section-title.text-center
 			//- 	h2 sContent
-			+soc
+			+e.socials.d-none.d-xl-block
+				+soc
+					+item-sos()(style="--bgColor: #4680C2; --hoverBg: #5CA1EF;")
+						+img('img/svg/vk-1.svg').img-svg-js
+					+item-sos()(style="--bgColor: #49CB5B; --hoverBg: #4BED61;")
+						+img('img/svg/whatsapp-1.svg').img-svg-js
+					+item-sos()(style="--bgColor: #37AEE2; --hoverBg: #57C7F9;")
+						+img('img/svg/telegram-1.svg').img-svg-js
+					+item-sos()(style="--bgColor: #FF5900; --hoverBg: #FF6E20;")
+						+img('img/svg/copy-1.svg').img-svg-js
+					+item-sos('share')(style="--bgColor: #F5F6F7; --hoverBg: #FFFFFF; --hoverBdc: #EFF0F2;")
 			+e.wrap
 				h2 h2. заголовок
 				p Наша компания &laquo;Мастера Заборов&raquo; рада приветствовать Вас на&nbsp;своем официальном сайте! Мы&nbsp;с&nbsp;гордостью предлагаем своим клиентам производство заборов самых разнообразных видов и&nbsp;последующую их&nbsp;установку. Более чем пять лет своего существования наша компания успела заслужить репутацию по&nbsp;строительству заборов.

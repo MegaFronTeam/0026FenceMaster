@@ -7,8 +7,14 @@
 	@include media-breakpoint-up(md) {
 		font-size: rem(16);
 	}
-	.container {
+	&__container {
 		position: relative;
+	}
+	&__socials {
+		position: absolute;
+		right: calc(var(--bs-gutter-x) * 0.5);
+		top: 0;
+		height: 100%;
 	}
 	&__wrap {
 		max-width: rem(936);
@@ -134,8 +140,29 @@
 	}
 
 	.soc {
-		display: inline-flex;
+		display: flex;
 		flex-direction: column;
+		--bs-gutter-x: 0;
+		--bs-gutter-y: #{rem(10)};
+		&__item {
+			@include mt(0.25s);
+			background-color: var(--bgColor);
+			width: rem(40);
+			height: rem(40);
+			border-radius: rem(10);
+			border: 1px solid transparent;
+			&:hover {
+				background-color: var(--hoverBg);
+				border-color: var(--hoverBdc, transparent);
+			}
+		}
+		.icon,
+		svg,
+		img {
+			font-size: rem(24);
+			width: 1em;
+			height: 1em;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {

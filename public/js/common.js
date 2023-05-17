@@ -567,7 +567,18 @@ function eventHandler() {
 	// 	document.querySelector('body').classList.add('fixed2');
 	// })
 
-	
+	$('.sContent__socials .soc').hcSticky({
+    stickTo: $('.sContent__socials'),
+		top: 60,
+		bottom: 20,
+		mobileFirst: true,
+		disable: true,
+		responsive: {
+			992: {
+				disable: false
+			}
+		}
+  });
 
 };
 if (document.readyState !== 'loading') {
