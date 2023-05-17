@@ -97,7 +97,7 @@
 	}
 }
 
-.breadcrumb-slider--js {
+.breadcrumb-slider {
 	margin-bottom: rem(18);
 	@include media-breakpoint-up(lg) {
 		margin-bottom: var(--bs-breadcrumb-margin-bottom);
@@ -583,5 +583,25 @@
 		font-size: rem(20);
 		color: $primary;
 		margin-right: rem(6);
+	}
+}
+
+.page-head {
+	padding-top: rem(36);
+	padding-bottom: rem(24);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(60);
+		padding-bottom: rem(48);
+	}
+	.breadcrumb-slider {
+		margin-bottom: rem(18);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(24);
+		}
+	}
+	h1 > span,
+	h2 > span {
+		display: inline-block;
+		color: $primary;
 	}
 }
