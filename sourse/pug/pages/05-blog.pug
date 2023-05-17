@@ -7,6 +7,7 @@ extends ../layout/main.pug
 //- include ../blocks/sStocks/_sStocks.pug
 //- include ../blocks/sSteps/_sSteps.pug
 //- include ../blocks/sFeatures/_sFeatures.pug
+include ../blocks/sBlog/_sBlog.pug
 include ../blocks/sOrder/_sOrder.pug
 //- include ../blocks/sServiceHead/_sServiceHead.pug
 
@@ -35,5 +36,6 @@ block pagecontent
 		+page-head(``,`Блог`)
 			h1 блог 
 				span компании
+		+sBlog().pt-0
 		+sOrder()
 	+parts('footer')

@@ -349,16 +349,40 @@
 				font-size: rem(18);
 			}
 		}
-		span {
-			display: inline-block;
+		p {
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+			display: -webkit-box;
+			overflow: hidden;
+			
+			// display: block;
 			font-size: rem(12);
 			line-height: 1.35;
+			margin-bottom: 0;
+			
 			@include media-breakpoint-up(sm) {
 				font-size: rem(14);
 			}
+			@include media-breakpoint-up(md) {
+				-webkit-line-clamp: 2;
+			}
 			@include media-breakpoint-up(lg) {
 				font-size: rem(16);
-				line-height: 1.25;
+				// line-height: 1.25;
+			}
+		}
+		small {
+			display: block;
+			margin-top: rem(6);
+			font-size: rem(10);
+			line-height: 1.35;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(12);
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: rem(14);
+				color: $secondary;
+				// line-height: 1.25;
 			}
 		}
 	}
