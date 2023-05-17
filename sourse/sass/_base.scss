@@ -78,7 +78,7 @@ body {
 	}
 	&[class*="fixed"] {
 		position: absolute;
-		width: 100%;
+		width: 100% !important;
 		left: 0;
 		top: 0;
 		z-index: 999;
