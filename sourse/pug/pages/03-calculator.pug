@@ -32,5 +32,15 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
+		+page-head(``,`Калькулятор`)
+			h1
+				span калькулятор стоимости
+				|  ограждения
+		.container
+			.row
+				.col-md-6
+					+choiceOption(`Доставка`, `Наша служба доставки привезёт заказ домой, в&nbsp;офис или на&nbsp;дачу`, 'delivery')(checked)
+				.col-md-6
+					+choiceOption(`Самовывоз`, `Заберите заказ бесплатно из&nbsp;магазина Декор Паркет или пункта самовывоза`, 'delivery')
 		+sOrder()
 	+parts('footer')

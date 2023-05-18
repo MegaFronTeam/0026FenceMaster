@@ -147,3 +147,17 @@ mixin catalogDropdown()
 					li: a(href="#") Пункт 3
 					li: a(href="#") Пункт 4
 					li: a(href="#") Пункт 5
+
+mixin choiceOption(title, text, name)
+	// start choiceOption
+	+b.choiceOption
+		label
+			input.btn-check(name=`${name}` type='radio')&attributes(attributes)
+			+e.SPAN.btn
+				+e.SPAN.check
+					+icon('check')
+				+e.SPAN.content
+					span.h5!= title 
+					+e.SPAN.text!= text
+			
+	// end choiceOption

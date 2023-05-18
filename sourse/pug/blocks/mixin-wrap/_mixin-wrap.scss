@@ -629,3 +629,90 @@
 		color: $primary;
 	}
 }
+
+.choiceOption {
+	position: relative;
+	height: 100%;
+	label {
+		height: 100%;
+	}
+
+	&__check {
+		@include mt;
+		@include a-cent(y);
+		position: relative;
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		color: $border-color;
+		border: 2px solid currentColor;
+		margin-right: rem(16);
+		flex-shrink: 0;
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(24);
+		}
+		.icon {
+			@include a-cent;
+			color: $border-color;
+			font-size: rem(24);
+		}
+	}
+	&__content {
+		flex-grow: 1;
+		span {
+			display: block;
+		}
+		.h5 {
+			font-size: rem(16);
+			margin-bottom: rem(4);
+			line-height: calc(24 / 18);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
+		}
+	}
+	&__text {
+		margin-bottom: rem(4);
+		font-size: rem(14);
+		line-height: calc(20 / 14);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__btn {
+		@include mt;
+		display: flex;
+		// align-items: center;
+		padding: rem(16);
+		cursor: pointer;
+		border: 2px dashed $border-color;
+		border-radius: $border-radius;
+		background-color: $light;
+		height: 100%;
+		@include media-breakpoint-up(lg) {
+			padding: rem(22);
+		}
+	}
+	input {
+		&:disabled {
+			pointer-events: none;
+			& + .choiceOption__btn {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+		}
+		&:checked {
+			& + .choiceOption__btn {
+				border-style: solid;
+				border-color: $primary;
+				.choiceOption__check {
+					color: $primary;
+					background-color: $primary;
+					.icon {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
