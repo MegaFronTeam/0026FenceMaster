@@ -2,8 +2,30 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
+			+e.row.row
+				.col-lg-6
+					+breadcrumb('Главная', 'Контакты')
+					h1 Контактная 
+						span информация
+					mixin item-sm(h)
+						+e.item-sm
+							h6!= h
+							if block
+								block
+					+item-sm(`адрес`)
+						p 125481, г. Москва, ул&nbsp;Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.
+					+item-sm(`Телефон`)
+						+e.tel(href='tel:+74955107785') +7 (495) 510-77-85
+							+img('img/svg/whatsapp.svg').img-svg-js
+						+e.btn.btn.btn-outline-primary(data-src='#modal-call' data-fancybox).btn-modal-js Заказать звонок
+					+item-sm(`График работы`)
+						p Работаем без выходных с&nbsp;8:00 до&nbsp;20:00
+					+item-sm(`электронная почта`)
+						+e.email(href='mailto:info@masterazoborov.ru') info@masterazoborov.ru
+
+				.col-lg-6
+					+e.map-wrap
+						script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad1baa0a48552e1c92cf9c8ff4171e395322df3d30149a3c8f97d83fcdc99bac2&width=100%25&height=564&lang=ru_RU&scroll=true')
+
 			+e.row.row
 	// end sContact

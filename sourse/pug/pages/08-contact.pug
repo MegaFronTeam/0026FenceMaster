@@ -13,7 +13,7 @@ include ../blocks/sOrder/_sOrder.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sContent/_sContent.pug
 
-//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
@@ -32,5 +32,6 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
+		+sContact()
 		+sOrder()
 	+parts('footer')
