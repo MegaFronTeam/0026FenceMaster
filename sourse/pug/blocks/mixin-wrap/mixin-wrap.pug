@@ -147,3 +147,14 @@ mixin catalogDropdown()
 					li: a(href="#") Пункт 3
 					li: a(href="#") Пункт 4
 					li: a(href="#") Пункт 5
+
+mixin choiceOption(title, name)
+	// start choiceOption
+	+b.choiceOption
+		label
+			+e.INPUT.input.form-check-input(name=`${name}` type='radio')&attributes(attributes)
+			+e.SPAN.btn
+				+img('img/svg/sCalculator-1.svg').img-svg-js
+				span.h6!= title 
+
+	// end choiceOption
