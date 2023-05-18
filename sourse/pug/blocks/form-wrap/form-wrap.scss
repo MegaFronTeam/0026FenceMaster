@@ -51,12 +51,18 @@
 		}
 	}
 	.form-control {
-		&.is-invalid, &.is-valid {
+		&.is-invalid,
+		&.is-valid {
 			background-image: none;
 			padding-right: $input-padding-x;
 			&:focus {
 				box-shadow: 0 6px 12px rgba(5, 5, 5, 0.12);
 			}
+		}
+	}
+	.form-select {
+		&:focus {
+			box-shadow: 0 6px 12px rgba(5, 5, 5, 0.12);
 		}
 	}
 }
