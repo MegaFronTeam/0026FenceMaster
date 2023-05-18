@@ -3,7 +3,7 @@ mixin sCalculator(data)
 	+b.sCalculator.section#sCalculator&attributes(attributes)
 		.container
 			+form-wrap
-				+e.row--radio.row
+				+e.row--radioBtns.row
 					.col-md-6.col-xl-4
 						+choiceOption(`рассчитать забор`, 'radioBtn')(checked)
 					.col-md-6.col-xl-4
@@ -11,4 +11,41 @@ mixin sCalculator(data)
 					.col-md-6.col-xl-4
 						+choiceOption(`рассчитать ворота`, 'radioBtn')
 					
+				+e.row--filters.row
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Забор из профнастила', 'select', 'Тип забора')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Количество метров', 'number', 'Количество метров')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('1.5', 'select', 'Высота, м')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('0.35', 'select', 'Толщина листа, мм')
+
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('2', 'select', 'Количество лаг')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Одностороннее', 'select', 'Покрытие')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Количество ворот', 'select', 'Количество ворот')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Распашные', 'select', 'Ворота')
+
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Нет', 'select', 'Автоматика')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Количество', 'number', 'Количество калиток')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Нет', 'select', 'Трамбовка столбов щебнем в п.м.')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Количество', 'number', 'Дополнительный столб для калиток')
+
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Грунтовка', 'select', 'Покраска каркаса краской')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Нет', 'select', 'Доставка')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Введите эл. почту', 'email', 'Выслать расчет на эл. почту')
+					.col-md-6.col-xl-4.col-xxl-3
+						+input('Введите телефон', 'tel', 'Ваш телефон')
+
 	// end sCalculator

@@ -617,6 +617,18 @@
 		padding-top: rem(60);
 		padding-bottom: rem(48);
 	}
+	&.page-head--center {
+		.breadcrumb {
+			@include media-breakpoint-up(md) {
+				justify-content: center;
+			}
+		}
+		h1 {
+			@include media-breakpoint-up(md) {
+				text-align: center;
+			}
+		}
+	}
 	.breadcrumb-slider {
 		margin-bottom: rem(18);
 		@include media-breakpoint-up(md) {

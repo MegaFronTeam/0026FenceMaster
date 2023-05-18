@@ -33,11 +33,12 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
-		+page-head(``,`Калькулятор`)
+		+page-head(``,`Калькулятор`).--center
 			h1
 				span калькулятор стоимости
+				br
 				|  ограждения
-		+sCalculator()
+		+sCalculator().pt-0
 		
 		+sOrder()
 	+parts('footer')
