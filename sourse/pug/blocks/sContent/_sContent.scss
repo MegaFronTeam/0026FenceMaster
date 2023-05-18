@@ -9,12 +9,14 @@
 	}
 	&__container {
 		position: relative;
+		border-bottom: 1px solid $gray-300;
+		padding-bottom: calc(var(--sPB) * 2);
 	}
 	&__socials {
 		position: absolute;
 		right: calc(var(--bs-gutter-x) * 0.5);
 		top: 0;
-		height: 100%;
+		height: calc(100% - var(--sPB) * 2);
 	}
 	&__wrap {
 		max-width: rem(936);

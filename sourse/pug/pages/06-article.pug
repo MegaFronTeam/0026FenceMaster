@@ -36,6 +36,47 @@ block pagecontent
 		+headerBlock(2, `h1. помогаем подобрать навес под авто в загородный дом`, ``, `23 дек 23`)
 			+breadcrumb('Главная', 'Блог', 'Помогаем подобрать навес под авто в загородный дом')
 		+sContent().pt-0
+			+e.container.container
+				//- +b.section-title.text-center
+				//- 	h2 sContent
+				+e.socials.d-none.d-xl-block
+					+soc
+						+item-sos()(style="--bgColor: #4680C2; --hoverBg: #5CA1EF;")
+							+img('img/svg/vk-1.svg').img-svg-js
+						+item-sos()(style="--bgColor: #49CB5B; --hoverBg: #4BED61;")
+							+img('img/svg/whatsapp-1.svg').img-svg-js
+						+item-sos()(style="--bgColor: #37AEE2; --hoverBg: #57C7F9;")
+							+img('img/svg/telegram-1.svg').img-svg-js
+						+item-sos()(style="--bgColor: #FF5900; --hoverBg: #FF6E20;")
+							+img('img/svg/copy-1.svg').img-svg-js
+						+item-sos('share')(style="--bgColor: #F5F6F7; --hoverBg: #FFFFFF; --hoverBdc: #EFF0F2;")
+				+e.wrap
+					h2 h2. заголовок
+					p Наша компания &laquo;Мастера Заборов&raquo; рада приветствовать Вас на&nbsp;своем официальном сайте! Мы&nbsp;с&nbsp;гордостью предлагаем своим клиентам производство заборов самых разнообразных видов и&nbsp;последующую их&nbsp;установку. Более чем пять лет своего существования наша компания успела заслужить репутацию по&nbsp;строительству заборов.
+
+					h3 h3. заголовок
+					p В&nbsp;фотогалерее готовой продукции на&nbsp;нашем сайте вы&nbsp;легко сможете найти забор, соответствующий вашему вкусу. Кроме того, мы&nbsp;всегда готовы выполнить заказ на&nbsp;изготовление забора по&nbsp;индивидуальному проекту.
+
+					h4 h4. заголовок
+					p Мы&nbsp;всегда стремимся сделать все возможное, чтобы наше с&nbsp;вами сотрудничество стало еще более приятным и&nbsp;продуктивным. Строительство заборов начинается с&nbsp;замера территории и&nbsp;разработки проекта. Опытный специалист компании.
+
+					h5 h5. заголовок
+					ol
+						li Объем
+						li Количество осей
+						li Материал
+						li Изоляция
+						li Количество отсеков
+						li Оси
+
+					h6 h6. заголовок
+					ul
+						li Объем
+						li Количество осей
+						li Материал
+						li Изоляция
+						li Количество отсеков
+						li Оси
 		+sBlog2()
 		+sOrder()
 	+parts('footer')
