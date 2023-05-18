@@ -1,10 +1,9 @@
-mixin sGallery(data)
+mixin sGallery(title="фотогалерея наших <span> ограждений </span>")
 	// start sGallery
 	+b.SECTION.sGallery.section#sGallery&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 фотогалерея наших 
-					span ограждений
+				h2!= title
 			+e.row.row
 				mixin sGalleryItem(img)
 					+e.col.col-md-6.col-xl-4
