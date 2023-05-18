@@ -2,7 +2,7 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+e.row.row
+			+e.row--top.row
 				.col-lg-6
 					+breadcrumb('Главная', 'Контакты')
 					h1 Контактная 
@@ -17,6 +17,7 @@ mixin sContact()
 					+item-sm(`Телефон`)
 						+e.tel(href='tel:+74955107785') +7 (495) 510-77-85
 							+img('img/svg/whatsapp.svg').img-svg-js
+					+e.item-sm
 						+e.btn.btn.btn-outline-primary(data-src='#modal-call' data-fancybox).btn-modal-js Заказать звонок
 					+item-sm(`График работы`)
 						p Работаем без выходных с&nbsp;8:00 до&nbsp;20:00
@@ -27,5 +28,43 @@ mixin sContact()
 					+e.map-wrap
 						script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad1baa0a48552e1c92cf9c8ff4171e395322df3d30149a3c8f97d83fcdc99bac2&width=100%25&height=564&lang=ru_RU&scroll=true')
 
-			+e.row.row
+			+e.row--bottom.row
+				.col-lg-6.order-lg-last
+					+form-wrap
+						h3 связаться с&nbsp;нами
+						+e.subtitle Если у&nbsp;Вас есть вопросы или предложения, свяжитесь с&nbsp;нами через контактную форму ниже.
+						+e.row.row
+							.col-sm-6
+								+input('Ваше имя')
+							.col-sm-6
+								+input('Ваш email', 'email')
+							.col-sm-6
+								+input('Ваш телефон', 'tel')
+							.col-sm-6
+								+input('Ваш город')
+							.col-12
+								+input('Ваше сообщение', 'textarea')
+							.col-sm-6
+								+e.BUTTON.btn.btn.btn-primary Отправить заявку
+							.col-12
+								+policy()
+				.col-lg-6
+					+e.props
+						h3 реквизиты предприятия
+						+item-sm(`ООО «Строй Модуль»`)
+							p Наименование предприятия
+						+item-sm(`125481, г. Москва, ул&nbsp;Фомичевой, д.&nbsp;16, корп.&nbsp;3, эт.&nbsp;1, пом.&nbsp;252, оф. 2к.`)
+							p Юридический адрес
+						+item-sm(`7733221469`)
+							p ИНН
+						+item-sm(`773301001`)
+							p КПП
+						+item-sm(`1157746114085`)
+							p ОГРН
+						+item-sm(`40006679`)
+							p ОКПО
+						+item-sm(`45283555000`)
+							p ОКАТО
+						+e.item-sm
+							+downloadRequisites()
 	// end sContact
