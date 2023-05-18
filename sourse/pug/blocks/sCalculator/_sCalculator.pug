@@ -1,0 +1,14 @@
+mixin sCalculator(data)
+	// start sCalculator
+	+b.sCalculator.section#sCalculator&attributes(attributes)
+		.container
+			+form-wrap
+				+e.row--radio.row
+					.col-md-6.col-xl-4
+						+choiceOption(`рассчитать забор`, 'radioBtn')(checked)
+					.col-md-6.col-xl-4
+						+choiceOption(`рассчитать навес`, 'radioBtn')
+					.col-md-6.col-xl-4
+						+choiceOption(`рассчитать ворота`, 'radioBtn')
+					
+	// end sCalculator

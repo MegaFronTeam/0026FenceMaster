@@ -49,34 +49,42 @@
 						<h1><span>калькулятор стоимости</span> ограждения</h1>
 					</div>
 				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<!-- start choiceOption-->
-							<div class="choiceOption">
-								<label>
-									<input class="btn-check" name="delivery" type="radio" checked="checked"/><span class="choiceOption__btn"><span class="choiceOption__check">
-									<svg class="icon icon-check ">
-										<use xlink:href="img/svg/sprite.svg#check"></use>
-									</svg></span><span class="choiceOption__content"><span class="h5">Доставка</span><span class="choiceOption__text">Наша служба доставки привезёт заказ домой, в&nbsp;офис или на&nbsp;дачу</span></span></span>
-								</label>
-							</div>
-							<!-- end choiceOption-->
-						</div>
-						<div class="col-md-6">
-							<!-- start choiceOption-->
-							<div class="choiceOption">
-								<label>
-									<input class="btn-check" name="delivery" type="radio"/><span class="choiceOption__btn"><span class="choiceOption__check">
-									<svg class="icon icon-check ">
-										<use xlink:href="img/svg/sprite.svg#check"></use>
-									</svg></span><span class="choiceOption__content"><span class="h5">Самовывоз</span><span class="choiceOption__text">Заберите заказ бесплатно из&nbsp;магазина Декор Паркет или пункта самовывоза</span></span></span>
-								</label>
-							</div>
-							<!-- end choiceOption-->
+				<!-- start sCalculator-->
+				<div class="sCalculator section" id="sCalculator">
+					<div class="container">
+						<div class="form-wrap">
+							<form>
+								<div class="form-wrap__row form-wrap__row--radio row">
+									<div class="col-md-6 col-xl-4">
+										<!-- start choiceOption-->
+										<div class="choiceOption">
+											<label><input class="choiceOption__input form-check-input" name="radioBtn" type="radio" checked="checked"/><span class="choiceOption__btn"><img class="img-svg-js" src="img/svg/sCalculator-1.svg" alt="" loading="lazy"/><span class="h6">рассчитать забор</span></span>
+											</label>
+										</div>
+										<!-- end choiceOption-->
+									</div>
+									<div class="col-md-6 col-xl-4">
+										<!-- start choiceOption-->
+										<div class="choiceOption">
+											<label><input class="choiceOption__input form-check-input" name="radioBtn" type="radio"/><span class="choiceOption__btn"><img class="img-svg-js" src="img/svg/sCalculator-1.svg" alt="" loading="lazy"/><span class="h6">рассчитать навес</span></span>
+											</label>
+										</div>
+										<!-- end choiceOption-->
+									</div>
+									<div class="col-md-6 col-xl-4">
+										<!-- start choiceOption-->
+										<div class="choiceOption">
+											<label><input class="choiceOption__input form-check-input" name="radioBtn" type="radio"/><span class="choiceOption__btn"><img class="img-svg-js" src="img/svg/sCalculator-1.svg" alt="" loading="lazy"/><span class="h6">рассчитать ворота</span></span>
+											</label>
+										</div>
+										<!-- end choiceOption-->
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
+				<!-- end sCalculator-->
 				<!-- start sOrder-->
 				<section class="sOrder section" id="sOrder">
 					<div class="container">

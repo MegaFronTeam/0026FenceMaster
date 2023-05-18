@@ -948,7 +948,8 @@ $form-check-input-border:                 var(--#{$prefix}border-width) solid va
 $form-check-input-border-radius:          .25em !default;
 $form-check-radio-border-radius:          50% !default;
 $form-check-input-focus-border:           $input-focus-border-color !default;
-$form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
+$form-check-input-focus-box-shadow:       none;
+// $form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color:          $primary !default;
 $form-check-input-checked-bg-color:       $white;
