@@ -29,12 +29,13 @@ mixin modal()
 							+img('img/measure.png', 'bg')
 				+e.footer
 					p Оставьте заявку, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время и&nbsp;расскажем об&nbsp;акции подробнее!
-					.row
-						.col-md-6
-							+input('Ваш телефон', 'tel')(required)
-						.col-md-6
-							+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить заявку
-					+policy()
+					+e.btns
+						.row
+							.col-md-6
+								+input('Ваш телефон', 'tel')(required)
+							.col-md-6
+								+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить заявку
+						+policy()
 
 	// #modal-measure
 
