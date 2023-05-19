@@ -1,6 +1,19 @@
 .form-wrap {
 	&__input-wrap {
 		// @extend .form-group;
+		&.spinner {
+			label {
+				position: relative;
+			}
+			.form-wrap__input {
+				padding-right: rem(50);
+			}
+			.btnSpinner {
+				@include a-cent(y);
+				justify-content: center;
+				right: rem(18);
+			}
+		}
 	}
 	&__input {
 		// @extend .form-control;
@@ -132,6 +145,10 @@
 @include media-breakpoint-down(xs) {
 }
 
+.form-select {
+	padding-right: rem(50);
+}
+
 .form-check {
 }
 .form-check-input {
@@ -218,6 +235,30 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 	/* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.btnSpinner {
+	display: inline-flex;
+	flex-direction: column;
+	button {
+		@include mt(0.2s);
+		width: rem(20);
+		height: rem(20);
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $secondary;
+		&:hover,
+		&:active {
+			color: $primary;
+		}
+		.icon {
+			font-size: rem(20);
+		}
+	}
 }
 
 // .jq-selectbox{

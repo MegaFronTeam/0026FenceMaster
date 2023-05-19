@@ -15,7 +15,7 @@ mixin sCalculator(data)
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Забор из профнастила', 'select', 'Тип забора')
 					.col-md-6.col-xl-4.col-xxl-3
-						+input('Количество метров', 'number', 'Количество метров')
+						+inputNumber(`Количество метров`, `Количество метров`)
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('1.5', 'select', 'Высота, м')
 					.col-md-6.col-xl-4.col-xxl-3
@@ -33,11 +33,12 @@ mixin sCalculator(data)
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Нет', 'select', 'Автоматика')
 					.col-md-6.col-xl-4.col-xxl-3
-						+input('Количество', 'number', 'Количество калиток')
+						+inputNumber(`Количество`, `Количество калиток`)
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Нет', 'select', 'Трамбовка столбов щебнем в п.м.')
 					.col-md-6.col-xl-4.col-xxl-3
-						+input('Количество', 'number', 'Дополнительный столб для калиток')
+						+inputNumber(`Количество`, `Дополнительный столб для калиток`)
+						
 
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Грунтовка', 'select', 'Покраска каркаса краской')
