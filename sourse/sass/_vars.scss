@@ -914,7 +914,8 @@ $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                0px 6px 12px rgba(5, 5, 5, 0.12);
 // $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
+$input-placeholder-color:               $secondary;
+// $input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
 $input-plaintext-color:                 var(--#{$prefix}body-color) !default;
 
 $input-height-border:                   calc($input-border-width * 2) !default; // stylelint-disable-line function-disallowed-list
@@ -943,7 +944,8 @@ $form-check-transition:                   null !default;
 
 $form-check-input-active-filter:          brightness(90%) !default;
 
-$form-check-input-bg:                     $input-bg !default;
+$form-check-input-bg:                     $white;
+// $form-check-input-bg:                     $input-bg !default;
 $form-check-input-border:                 var(--#{$prefix}border-width) solid var(--#{$prefix}border-color) !default;
 $form-check-input-border-radius:          .25em !default;
 $form-check-radio-border-radius:          50% !default;

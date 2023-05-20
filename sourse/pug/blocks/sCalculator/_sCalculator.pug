@@ -33,11 +33,11 @@ mixin sCalculator(data)
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Нет', 'select', 'Автоматика')
 					.col-md-6.col-xl-4.col-xxl-3
-						+input('Количество', 'number', 'Количество калиток')
+						+inputNumber(`Количество калиток`, `Количество`)
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Нет', 'select', 'Трамбовка столбов щебнем в п.м.')
 					.col-md-6.col-xl-4.col-xxl-3
-						+input('Количество', 'number', 'Дополнительный столб для калиток')
+						+inputNumber(`Дополнительный столб для калиток`, `Количество`)
 
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Грунтовка', 'select', 'Покраска каркаса краской')
@@ -47,5 +47,14 @@ mixin sCalculator(data)
 						+input('Введите эл. почту', 'email', 'Выслать расчет на эл. почту')
 					.col-md-6.col-xl-4.col-xxl-3
 						+input('Введите телефон', 'tel', 'Ваш телефон')
-
+				+e.result
+					.row
+						.col-xl-4.col-xxl
+							+e.price
+								span Ориентировочная стоимость работы:
+								.h3 1&nbsp;480&nbsp;560 руб
+						.col-lg-6.col-xl-4.col-xxl-3.order-lg-last
+							+e.BUTTON.btn.btn.btn-primary Получить расчет на почту
+						.col-lg-6.col-xl-4.col-xxl-3
+							+policy()
 	// end sCalculator

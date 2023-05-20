@@ -15,6 +15,30 @@ mixin modal()
 				+policy()
 	// #modal-call
 
+	div(id="modal-measure"  style="display: none" )
+		+b.modal-win--measure
+			+form-wrap
+				+e.row.row
+					.col-md-6.order-md-last
+						+e.heading
+							+e.title.form-data.h3.ttu Бесплатный замер
+							p.text-success Акция действует до&nbsp;31&nbsp;декабря&nbsp;2023!
+							p.after-headline Ограждения подойдут для домов, дач, строительных площадок, коммерческих и&nbsp;производственных объектов.
+					.col-md-6
+						+e.img-wrap
+							+img('img/measure.png', 'bg')
+				+e.footer
+					p Оставьте заявку, мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время и&nbsp;расскажем об&nbsp;акции подробнее!
+					+e.btns
+						.row
+							.col-md-6
+								+input('Ваш телефон', 'tel')(required)
+							.col-md-6
+								+e.BUTTON.btn.btn.btn-primary(type="submit") Отправить заявку
+						+policy()
+
+	// #modal-measure
+
 	div(id="modal-search-list" style="display: none" )
 		+b.modal-win--cityChoose
 			+form-wrap
@@ -24,56 +48,34 @@ mixin modal()
 						+icon('close')
 				+e.scroll-list
 					ul
-						a(href="#")
-							li.active Москва
-						a(href='#')
-							li Балашиха
-						a(href='#')
-							li Бронницы
-						a(href='#')
-							li Видное
-						a(href='#')
-							li Волоколамск
-						a(href='#')
-							li Воскресенск
-						a(href='#')
-							li Дзержинск
-						a(href='#')
-							li Дмитров
-						a(href='#')
-							li Екатеринбург
-						a(href='#')
-							li Иркутск
-						a(href='#')
-							li Кемерово
-						a(href='#')
-							li Красноярск
-						a(href='#')
-							li Новосибирск
-						a(href='#')
-							li Омск
-						a(href='#')
-							li Оренбург
-						a(href='#')
-							li Пермь
-						a(href='#')
-							li Ростов-на-Дону
-						a(href='#')
-							li Самара
-						a(href='#')
-							li Саратов
-						a(href='#')
-							li Томск
-						a(href='#')
-							li Тула
-						a(href='#')
-							li Тюмень
-						a(href='#')
-							li Улан-Удэ
-						a(href='#')
-							li Хабаровск
-						a(href='#')
-							li Якутск
+						mixin listItem(city)
+							li&attributes(attributes)
+								a(href="#")!= city
+						+listItem(`Москва`).active
+						+listItem(`Балашиха`)
+						+listItem(`Бронницы`)
+						+listItem(`Видное`)
+						+listItem(`Волоколамск`)
+						+listItem(`Дзержинск`)
+						+listItem(`Дмитров`)
+						+listItem(`Екатеринбург`)
+						+listItem(`Иркутск`)
+						+listItem(`Кемерово`)
+						+listItem(`Красноярск`)
+						+listItem(`Новосибирск`)
+						+listItem(`Омск`)
+						+listItem(`Оренбург`)
+						+listItem(`Пермь`)
+						+listItem(`Ростов-на-Дону`)
+						+listItem(`Самара`)
+						+listItem(`Саратов`)
+						+listItem(`Томск`)
+						+listItem(`Тула`)
+						+listItem(`Тюмень`)
+						+listItem(`Улан-Удэ`)
+						+listItem(`Хабаровск`)
+						+listItem(`Якутск`)
+
 		// #modal-search-list
 	
 	// end modals
