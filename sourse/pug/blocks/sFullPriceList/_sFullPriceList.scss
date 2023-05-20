@@ -1,0 +1,183 @@
+// start .sFullPriceList
+.sFullPriceList {
+	--sPT: #{rem(0)};
+	// --sTPB: #{rem()};
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(47)};
+	}
+	&__row{
+		--bs-gutter-x: #{rem(12)};
+		--bs-gutter-y: #{rem(60)};
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-y: 0;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				width: calc(100% - var(--bs-gutter-x));
+				top: calc(var(--sPT) * -1);
+				left: calc(var(--bs-gutter-x) * 0.5);
+				height: 1px;
+				background-color: $gray-300;
+			}
+		}
+	}
+	.dd-group {
+		box-shadow: 0px 6px 24px rgba(5, 5, 5, 0.12);
+		@include media-breakpoint-up(lg) {
+			width: 100%;
+			max-width: rem(336);
+		}
+		&__item {
+			&:not(:last-child) {
+				.dd-group__head {
+					border-bottom: 1px solid $gray-300;
+				}
+			}
+			&.active {
+				.dd-group__head {
+					&:before {
+						background-color: $primary;
+					}
+					&:after {
+						transform: translateY(-50%) rotateX(180deg);
+					}
+				}
+			}
+		}
+		&__head {
+			padding: rem(16) rem(40) rem(16) rem(18);
+			background-color: #fff;
+			position: relative;
+			cursor: pointer;
+			@include media-breakpoint-up(lg) {
+				padding: rem(20.400) rem(45) rem(20.400) rem(24);
+			}
+			&:before {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				height: 100%;
+				width: 3px;
+				background-color: transparent;
+				top: 0;
+				left: 0;
+			}
+			&:after {
+				@include mt;
+				content: '';
+				position: absolute;
+				display: block;
+				width: rem(20);
+				height: rem(20);
+				background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.29289 7.29289C5.68342 6.90237 6.31658 6.90237 6.70711 7.29289L10 10.5858L13.2929 7.29289C13.6834 6.90237 14.3166 6.90237 14.7071 7.29289C15.0976 7.68342 15.0976 8.31658 14.7071 8.70711L10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289Z' fill='%23FF5900'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				transform: translateY(-50%);
+				top: 50%;
+				right: rem(18);
+				@include media-breakpoint-up(lg) {
+					right: rem(24);
+				}
+			}
+			h5 {
+				font-size: rem(12);
+				font-weight: 500;
+				line-height: 1.25;
+				font-family: $default-font;
+				@include media-breakpoint-up(lg) {
+					font-size: rem(16);
+				}
+			}
+		}
+		&__content {
+			padding: rem(18);
+			background-color: $gray-100;
+			display: none;
+			@include media-breakpoint-up(lg) {
+				padding: rem(15.200) rem(24);
+			}
+			ul {
+				--bs-gutter-y: #{rem(7.200)};
+
+				display: flex;
+				flex-direction: column;
+				list-style-type: none;
+				margin-bottom: 0;
+				margin-top: calc(var(--bs-gutter-y) * -1);
+				li {
+					margin-top: var(--bs-gutter-y);
+				}
+			}
+			a {
+				font-size: rem(10);
+				line-height: 1.4;
+				color: $body-color;
+				@include media-breakpoint-up(lg) {
+					font-size: rem(14);
+				}
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+	}
+	&__wrap {
+		@include media-breakpoint-up(lg) {
+			width: 100%;
+			max-width: rem(1032);
+			margin-left: auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(36);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(60);
+			}
+		}
+		h2 {
+			margin-bottom: rem(24);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(36);
+			}
+		}
+		h3 {
+			margin-bottom: rem(18);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+		.custom-table-wrap {
+			margin-bottom: rem(12);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(24);
+			}
+		}
+	}
+	.alert {
+		--bs-alert-color: $body-color;
+		--bs-alert-border-radius: 0;
+		--bs-alert-margin-bottom: #{rem(18)};
+		font-weight: 400;
+		@include media-breakpoint-up(lg) {
+			--bs-alert-padding-y: #{rem(18)};
+    	--bs-alert-padding-x: #{rem(24)};
+			--bs-alert-margin-bottom: #{rem(36)};
+		}
+		svg {
+			color: $primary;
+			@include media-breakpoint-up(lg) {
+				margin-right: rem(24);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFullPriceList
