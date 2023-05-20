@@ -32,5 +32,10 @@ block pagecontent
 	+parts('header')
 	main
 		+topAlert()
+		+page-head(``,`Прайс-лист`).--center
+			h1
+				span полный Прайс-лист
+				br
+				|  на ограждения
 		+sOrder()
 	+parts('footer')
