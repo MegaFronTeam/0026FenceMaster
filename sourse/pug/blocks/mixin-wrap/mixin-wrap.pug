@@ -158,3 +158,17 @@ mixin choiceOption(title, name)
 				span.h6!= title 
 
 	// end choiceOption
+
+mixin customTable(head)
+	+b.custom-table-wrap&attributes(attributes)
+		+e.table-head!= head
+		mixin tr(key, val, ...items)
+			tr
+				if key && val
+					td!= key
+					td!= val
+				else
+					each item in items
+						td!= item
+		table
+			block
