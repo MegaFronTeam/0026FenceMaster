@@ -20,7 +20,7 @@ block pagecontent
 			.row
 				mixin btn(id, name)
 					.col-auto.mb-2
-						button.btn.btn-primary(type='button' data-src=id data-fancybox).btn-modal-js= name
+						button.btn.btn-primary(type='button' data-src=id).btn-modal-js= name
 				+btn("#modal-search-list", "Выберите город")
 				+btn("#modal-call", "Заказать звонок")
 				+btn("#modal-measure", "Бесплатный замер")
