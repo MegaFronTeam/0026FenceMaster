@@ -7,7 +7,7 @@ mixin sGallery(title="фотогалерея наших <span> огражден�
 			+e.row.row
 				mixin sGalleryItem(img)
 					+e.col.col-md-6.col-xl-4
-						+e.item(href=`img/sGallery-lg-${img}.jpg` data-fancybox="sGallery")
+						+e.item(href=`img/sGallery-lg-${img}.jpg` data-gallery).btn-modal-js
 							+img(`img/sGallery-${img}.jpg`, 'bg')
 				- for (var x = 1; x < 10; x++)
 					+sGalleryItem(x)
