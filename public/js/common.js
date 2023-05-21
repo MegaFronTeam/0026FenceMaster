@@ -14,7 +14,7 @@ const JSCCommon = {
 			dragToClose: false,
 			autoFocus: false,
 			groupAll: false,
-			groupAttr: 'data-gallery',
+			groupAttr: 'data-fancybox="sGallery"',
 			showClass: "fancybox-throwOutUp",
 			hideClass: "fancybox-throwOutDown",
 			l10n: {
