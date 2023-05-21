@@ -40,9 +40,9 @@ const JSCCommon = {
 				Fancybox.close();
 			})
 		})
-		// Fancybox.bind('[data-fancybox]', {
-		// 	placeFocusBack: false,
-		// });
+		Fancybox.bind('[data-fancybox]', {
+			placeFocusBack: false,
+		});
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
 			if (!element) return;
