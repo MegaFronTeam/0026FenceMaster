@@ -175,18 +175,18 @@ mixin customTable(head)
 
 mixin btnSpinner()
 	+b.SPAN.btnSpinner()
-		button(type="button")
+		button.plus-js(type="button")
 			+icon('chevronTop')
-		button(type="button")
+		button.minus-js(type="button")
 			+icon('chevronDown')
 
 
 mixin inputNumber(label, placeholder)
-	.form-wrap__input-wrap.form-group.spinner
+	.form-wrap__input-wrap.form-group.spinner.spinner--js
 		if label
 			span.form-wrap__input-title!= label
 		label
-			input.form-wrap__input.form-control(name='number' type='number' placeholder=`${placeholder}` step='any')
+			input.form-wrap__input.form-control(name='number' type='number' min="0" placeholder=`${placeholder}` step='any')
 			+btnSpinner()
 
 

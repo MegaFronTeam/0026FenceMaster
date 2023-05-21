@@ -93,8 +93,48 @@
 	.icon {
 		font-size: rem(20);
 		color: $gray-400;
-		&.active {
-			color: #f5b04d;
+		// &.active {
+		// 	color: #f5b04d;
+		// }
+	}
+	&[data-rating="1"] {
+		.icon {
+			&:nth-child(-n + 1) {
+				// opacity: 1;
+				color: #f5b04d;
+			}
+		}
+	}
+	&[data-rating="2"] {
+		.icon {
+			&:nth-child(-n + 2) {
+				// opacity: 1;
+				color: #f5b04d;
+			}
+		}
+	}
+	&[data-rating="3"] {
+		.icon {
+			&:nth-child(-n + 3) {
+				// opacity: 1;
+				color: #f5b04d;
+			}
+		}
+	}
+	&[data-rating="4"] {
+		.icon {
+			&:nth-child(-n + 4) {
+				// opacity: 1;
+				color: #f5b04d;
+			}
+		}
+	}
+	&[data-rating="5"] {
+		.icon {
+			&:nth-child(-n + 5) {
+				// opacity: 1;
+				color: #f5b04d;
+			}
 		}
 	}
 }

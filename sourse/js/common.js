@@ -568,7 +568,7 @@ function eventHandler() {
 	// })
 
 	$('.sContent__socials .soc').hcSticky({
-    stickTo: $('.sContent__socials'),
+		stickTo: $('.sContent__socials'),
 		top: 60,
 		bottom: 20,
 		mobileFirst: true,
@@ -578,10 +578,10 @@ function eventHandler() {
 				disable: false
 			}
 		}
-  });
+	});
 
 	$('.sFullPriceList .dd-group').hcSticky({
-    stickTo: $('.sFullPriceList__row'),
+		stickTo: $('.sFullPriceList__row'),
 		top: 60,
 		bottom: 20,
 		mobileFirst: true,
@@ -591,7 +591,19 @@ function eventHandler() {
 				disable: false
 			}
 		}
-  });
+	});
+
+	$('.plus-js').click(function () {
+		const input = $(this).closest(".spinner--js").find("input");
+		input.val(+input.val() + 1);
+	});
+
+	$('.minus-js').click(function () {
+		const input = $(this).closest(".spinner--js").find("input");
+		if (input.val() > 0) {
+			input.val(+input.val() - 1);
+		}
+	});
 
 };
 if (document.readyState !== 'loading') {

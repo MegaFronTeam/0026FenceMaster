@@ -6,11 +6,11 @@ mixin reviewItem(img, name, date)
 			+e.name
 				.h5!= name
 				span!= date
-		+b.star-block
-			+icon("star", "active")
-			+icon("star", "active")
-			+icon("star", "active")
-			+icon("star", "active")
+		+b.star-block(data-rating="4")
+			+icon("star")
+			+icon("star")
+			+icon("star")
+			+icon("star")
 			+icon("star")
 		+e.player
 			audio.js-player(controls='')
