@@ -580,6 +580,19 @@ function eventHandler() {
 		}
   });
 
+	$('.sFullPriceList .dd-group').hcSticky({
+    stickTo: $('.sFullPriceList__row'),
+		top: 60,
+		bottom: 20,
+		mobileFirst: true,
+		disable: true,
+		responsive: {
+			992: {
+				disable: false
+			}
+		}
+  });
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

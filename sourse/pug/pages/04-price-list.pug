@@ -6,8 +6,8 @@ extends ../layout/main.pug
 //- include ../blocks/sAbout/_sAbout.pug
 //- include ../blocks/sStocks/_sStocks.pug
 //- include ../blocks/sSteps/_sSteps.pug
-//- include ../blocks/sFeatures/_sFeatures.pug
 include ../blocks/sOrder/_sOrder.pug
+include ../blocks/sFullPriceList/_sFullPriceList.pug
 //- include ../blocks/sServiceHead/_sServiceHead.pug
 
 //- include ../blocks/sForm/_sForm.pug
@@ -36,6 +36,7 @@ block pagecontent
 			h1
 				span полный Прайс-лист
 				br
-				|  на ограждения
+				| на ограждения
+		+sFullPriceList
 		+sOrder()
 	+parts('footer')
