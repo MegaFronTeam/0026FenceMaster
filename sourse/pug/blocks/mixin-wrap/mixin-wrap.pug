@@ -161,7 +161,7 @@ mixin choiceOption(title, name)
 
 mixin customTable(head)
 	+b.custom-table-wrap&attributes(attributes)
-		+e.table-head!= head
+		//- +e.table-head!= head
 		mixin tr(key, val, ...items)
 			tr
 				if key && val
@@ -171,6 +171,9 @@ mixin customTable(head)
 					each item in items
 						td!= item
 		table
+			thead
+				tr
+					th.custom-table-wrap__table-head(colspan=2)!= head
 			block
 
 mixin btnSpinner()
