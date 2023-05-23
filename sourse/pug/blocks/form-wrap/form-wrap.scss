@@ -241,7 +241,7 @@ input::-webkit-inner-spin-button {
 	display: inline-flex;
 	flex-direction: column;
 	button {
-		@include mt(0.2s);
+		@include mt;
 		width: rem(20);
 		height: rem(20);
 		padding: 0;

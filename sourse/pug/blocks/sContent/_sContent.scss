@@ -147,7 +147,7 @@
 		--bs-gutter-x: 0;
 		--bs-gutter-y: #{rem(10)};
 		&__item {
-			@include mt(0.25s);
+			@include mt;
 			background-color: var(--bgColor);
 			width: rem(40);
 			height: rem(40);

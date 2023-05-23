@@ -11,7 +11,7 @@ mixin sSteps(data)
 						.swiper-wrapper
 							mixin slide(img, text)
 								+e.slide.swiper-slide
-									+e.item(href="#")&attributes(attributes)
+									+e.item&attributes(attributes)
 										+e.img-wrap
 											+img(`img/sSteps-${img}.jpg`, 'bg')
 										+e.caption!= text

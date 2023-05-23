@@ -80,7 +80,7 @@
 				line-height: 1.2;
 			}
 			span {
-				@include mt(0.2s);
+				@include mt;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -96,7 +96,7 @@
 					height: rem(40);
 				}
 				.icon {
-					@include mt(0.2s);
+					@include mt;
 					font-size: rem(20);
 				}
 			}
