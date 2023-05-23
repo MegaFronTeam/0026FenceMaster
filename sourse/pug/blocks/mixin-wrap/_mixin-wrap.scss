@@ -213,7 +213,7 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	cursor: pointer;
+	// cursor: pointer;
 	--wrapPad: #{rem(18)};
 	@include media-breakpoint-up(xl) {
 		--wrapPad: #{rem(24)};
@@ -326,6 +326,17 @@
 			--bs-btn-disabled-color: #{$body-color};
 			--bs-btn-disabled-bg: #{$light};
 			--bs-btn-disabled-border-color: #{$light};
+		}
+	}
+	&__link {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
 		}
 	}
 	&__caption {

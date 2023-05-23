@@ -79,11 +79,12 @@ mixin categoryItem(img, title, price, date, btn)
 							+e.btn.btn.btn-outline-white(href='#') Подробнее
 						.col-6.col-lg-12
 							+e.btn.btn.btn-primary(href='#') Сделать заказ
-		+e.caption
-			.h5!= title
-			p!= price
-			if date
-				small!= date
+		+e.link(href='#')
+			+e.caption
+				.h5!= title
+				p!= price
+				if date
+					small!= date
 
 mixin contactUs()
 	+b.contact-us
