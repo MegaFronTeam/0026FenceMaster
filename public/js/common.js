@@ -528,38 +528,38 @@ function eventHandler() {
 	document.addEventListener('click', (event) => {
 		let submenuTarget = event.target.closest('.dropdown-js');
 		if (submenuTarget) {
-			if (window.matchMedia('(max-width: 1452px)').matches) {
+			if (window.matchMedia('(max-width: 1200px)').matches) {
 				submenuTarget.classList.toggle('active');
 				$(submenuTarget.querySelector('.dropdown-body-js')).slideToggle();
 			}
 		};
-
+		
 		let contactUsTarget = event.target.closest('.contact-us');
 		if (contactUsTarget) {
-			if (window.matchMedia('(max-width: 988px)').matches) {
-				$('.contact-us').toggleClass('active');
-				$('.contact-us__body').slideToggle();
-				document.querySelector('body').classList.toggle('blurBg');
-			}
+			$('.contact-us').toggleClass('active');
+			$('.contact-us__body').toggle();
+			document.querySelector('body').classList.toggle('blurBg2');
+			// if (window.matchMedia('(max-width: 988px)').matches) {
+			// }
 		}
 		if (!contactUsTarget) {
 			$('.contact-us').removeClass('active');
-			$('.contact-us__body').slideUp();
-			document.querySelector('body').classList.remove('blurBg');
+			$('.contact-us__body').hide();
+			document.querySelector('body').classList.remove('blurBg2');
 		}
-
+		
 	});
 
 	document.addEventListener('mouseover', (event) => {
-		if (event.target.closest('.dropdown-js') && window.matchMedia('(min-width: 1452px)').matches) {
+		if (event.target.closest('.dropdown-js') && window.matchMedia('(min-width: 1200px)').matches) {
 			document.querySelector('body').classList.add('blurBg');
 		};
 
-		if (event.target.closest('.contact-us') && window.matchMedia('(min-width: 988px)').matches) {
-			document.querySelector('body').classList.add('blurBg');
-		};
+		// if (event.target.closest('.contact-us') && window.matchMedia('(min-width: 988px)').matches) {
+		// 	document.querySelector('body').classList.add('blurBg');
+		// };
 
-		if (!event.target.closest('.dropdown-js') && !event.target.closest('.contact-us') && window.matchMedia('(min-width: 988px)').matches) {
+		if (!event.target.closest('.dropdown-js') && window.matchMedia('(min-width: 1200px)').matches) {
 			document.querySelector('body').classList.remove('blurBg');
 		};
 	});
