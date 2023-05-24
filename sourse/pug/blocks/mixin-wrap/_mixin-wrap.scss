@@ -230,7 +230,7 @@
 		// .h5 {
 		// 	color: $primary;
 		// }
-		.categoryItem__wrap {
+		.categoryItem__img-wrap {
 			&::after {
 				background-color: rgba(55, 51, 49, 0.48);
 			}
@@ -238,14 +238,17 @@
 	}
 	&.categoryItem--square {
 		.categoryItem {
-			&__wrap {
+			&__img-wrap {
 				@include media-breakpoint-up(xl) {
 					--ratio: 1/1;
 				}
 			}
 		}
 	}
-	&__wrap {
+	&__wrapper {
+		overflow: hidden;
+	}
+	&__img-wrap {
 		@include block(300, 456);
 		display: flex;
 		flex-direction: column;
@@ -282,10 +285,22 @@
 			}
 		}
 	}
+	&__btn-wrap {
+		position: relative;
+		z-index: 3;
+		pointer-events: none;
+	}
 	&__btns {
 		@include mt;
 		width: 100%;
 		margin-top: auto;
+		position: absolute;
+		bottom: calc(100% + var(--wrapPad) * 0.667);
+		left: var(--wrapPad);
+		max-width: calc(100% - var(--wrapPad) * 2);
+		@include media-breakpoint-up(sm) {
+			bottom: var(--wrapPad);
+		}
 		@include media-breakpoint-up(lg) {
 			transform: translateY(250px);
 		}
@@ -298,6 +313,7 @@
 	}
 	&__btn {
 		width: 100%;
+		pointer-events: all;
 		@include media-breakpoint-down(lg) {
 			--bs-btn-padding-y: #{rem(14)};
 			--bs-btn-padding-x: #{rem(10)};
@@ -329,6 +345,7 @@
 		}
 	}
 	&__link {
+		color: $body-color;
 		&::before {
 			content: "";
 			position: absolute;

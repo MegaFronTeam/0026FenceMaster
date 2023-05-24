@@ -68,17 +68,19 @@ mixin topAlert()
 
 mixin categoryItem(img, title, price, date, btn)
 	+b.categoryItem&attributes(attributes)
-		+e.wrap
-			+img(`img/${img}`, 'bg')
-			+e.btns
-				if btn
-					+e.btn.btn.btn-primary(href='#')!= btn
-				else
-					+e.row.row
-						.col-6.col-lg-12
-							+e.btn.btn.btn-outline-white(href='#') Подробнее
-						.col-6.col-lg-12
-							+e.btn.btn.btn-primary(href='#') Сделать заказ
+		+e.wrapper
+			+e.img-wrap
+				+img(`img/${img}`, 'bg')
+			+e.btn-wrap
+				+e.btns
+					if btn
+						+e.btn.btn.btn-primary(href='#')!= btn
+					else
+						+e.row.row
+							.col-6.col-lg-12
+								+e.btn.btn.btn-outline-white(href='#') Подробнее
+							.col-6.col-lg-12
+								+e.btn.btn.btn-primary(href='#') Сделать заказ
 		+e.link(href='#')
 			+e.caption
 				.h5!= title
