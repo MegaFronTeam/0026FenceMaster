@@ -6,7 +6,7 @@ mixin mnu()
 				if link.name
 					if link.name == 'Каталог'
 						li.menu-item.menu-item-has-children.dropdown-js(itemprop="item" )
-							a(href= link.url itemprop="url")= link.name
+							span(href= link.url itemprop="url")= link.name
 							+catalogDropdown()
 					else
 						li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
