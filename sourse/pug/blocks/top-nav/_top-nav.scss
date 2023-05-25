@@ -65,6 +65,14 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		@include media-breakpoint-up(lg) {
+			--bs-btn-padding-y: #{rem(10)};
+			--bs-btn-padding-x: #{rem(14)};
+		}
+		@include media-breakpoint-up(xxl) {
+			--bs-btn-padding-y: #{rem(12)};
+			--bs-btn-padding-x: #{rem(22)};
+		}
 	}
 	&__city {
 		@include mt;
