@@ -55,6 +55,9 @@
 		}
 		@include media-breakpoint-up(xxl) {
 			width: 100%;
+			right: calc(100% + var(--bs-gutter-x));
+		}
+		@media screen and (min-width: 1480px) {
 			right: calc(100% + var(--bs-gutter-x) + rem(24));
 		}
 		&:after {

@@ -569,7 +569,7 @@ function eventHandler() {
 
 	$('.sContent__socials .soc').hcSticky({
 		stickTo: $('.sContent__socials'),
-		top: 60,
+		top: 100,
 		bottom: 20,
 		mobileFirst: true,
 		disable: true,
@@ -582,7 +582,7 @@ function eventHandler() {
 
 	$('.sFullPriceList .dd-group').hcSticky({
 		stickTo: $('.sFullPriceList__row'),
-		top: 60,
+		top: 100,
 		bottom: 20,
 		mobileFirst: true,
 		disable: true,
