@@ -343,11 +343,17 @@
 				width: rem(100);
 				height: rem(100);
 				left: rem(176px);
-				top: rem(-30);
+				top: rem(-38);
 			}
 		}
 		@include media-breakpoint-up(xxl) {
 			top: calc(100% + var(--sPB) + rem(16));
+			&:before {
+				left: rem(220px);
+				top: rem(-47.600);
+			}
+		}
+		@media screen and (min-width: 1480px) {
 			&:before {
 				left: rem(280px);
 				top: rem(-47.600);
