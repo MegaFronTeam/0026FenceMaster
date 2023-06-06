@@ -83,7 +83,7 @@
 		@include media-breakpoint-up(xl) {
 			@include mt;
 			position: absolute;
-			top: calc(100% + var(--sPB) + rem(6));
+			top: calc(100% + var(--sPB) + rem(8));
 			left: calc(50% );
 			transform: translateX(-50%);
 			z-index: 100;
@@ -117,6 +117,9 @@
 			li {
 				margin-right: rem(48);
 			}
+		}
+		@include media-breakpoint-up(xxl) {
+			top: calc(100% + var(--sPB) + rem(16));
 		}
 	}
 }
