@@ -111,7 +111,7 @@
 				height: 100%;
 				left: 50%;
 				transform: translateX(-50%);
-				top: -25%;
+				top: -36%;
 				z-index: -1;
 			}
 			li {
@@ -196,7 +196,7 @@
 		background-color: $body-bg;
 		border: 1px solid $gray-300;
 		@include media-breakpoint-up(lg) {
-			top: rem(76);
+			top: rem(71);
 		}
 		&:not(.active){
 			transform: translate3d(0, -120%,0);
