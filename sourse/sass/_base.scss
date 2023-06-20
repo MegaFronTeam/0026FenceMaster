@@ -556,7 +556,7 @@ h1 {
 		@include rfs(50px, font-size);
 	}
 	@include media-breakpoint-down(md) {
-		font-size: rem(28);
+		font-size: rem(24);
 	}
 }
 h2 {
