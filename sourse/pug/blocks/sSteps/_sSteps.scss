@@ -79,10 +79,11 @@
 			width: 100%;
 		}
 		@include media-breakpoint-up(md) {
-			--ratio: 336/200;
+			--ratio: 200/336;
 		}
 		img {
 			@include mt;
+			@include a-cent;
 		}
 	}
 	&__caption {

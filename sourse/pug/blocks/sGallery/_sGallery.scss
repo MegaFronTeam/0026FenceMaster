@@ -19,6 +19,7 @@
 	}
 	&__item {
 		@include block(300, 456);
+		width: 100%;
 		border-radius: $border-radius;
 		overflow: hidden;
 		z-index: 2;
@@ -34,15 +35,15 @@
 			}
 		}
 		&::before {
-			content: "";
-			@include mt;
+			// content: "";
+			// @include mt;
 			background-color: rgba(55, 51, 49, 0.12);
-			height: 100%;
-			left: 0;
-			pointer-events: none;
-			position: absolute;
-			top: 0;
-			width: 100%;
+			// height: 100%;
+			// left: 0;
+			// pointer-events: none;
+			// position: absolute;
+			// top: 0;
+			// width: 100%;
 		}
 		&::after {
 			content: "";

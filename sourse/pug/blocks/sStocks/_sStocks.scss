@@ -44,6 +44,7 @@
 		}
 	}
 	&__item-inner {
+
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -53,7 +54,9 @@
 		padding: rem(12);
 		color: $white;
 		overflow: hidden;
-		position: relative;
+		// position: relative;
+		position: absolute;
+		@include a-cent;
 		z-index: 2;
 		@include media-breakpoint-up(md) {
 			border-radius: $border-radius;
